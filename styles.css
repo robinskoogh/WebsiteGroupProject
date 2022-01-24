@@ -7,6 +7,8 @@
 	vertical-align: baseline;
 }
 
+
+
 .mainBody {
     display: flex;
     width: 80%;
@@ -15,6 +17,7 @@
     max-width: 1370px;
     justify-content: center;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .mainBody .pageContent {
@@ -32,13 +35,18 @@
     margin-top: 50px;
 }
 
+
 #mainFooter {
-    background: #f5f5f5;;
+    position: fixed;
+    bottom: 0;
+    background: #f5f5f5;
     color: black;
     text-align: center;
     padding: 20px;
     margin-top: 50px;
     box-shadow: 0 35px 50px black;
+    max-width: none;
+    width: 100%;
     /*
     position: fixed;
     bottom: 0;
@@ -65,6 +73,7 @@
     display: block;
     text-align: left;
     transition: 300ms;
+    background-color: #f5f5f5;
 }
 
 .dropdownContent a:hover {
@@ -211,6 +220,7 @@
 
     .container .navbar ul .close {
         display: block;
+        z-index: 999;
     }
   
     .container .navbar .icon {
@@ -225,5 +235,6 @@
     #navBarList {
         top: 80px;
         min-width: none;
+        z-index: 999;
     }
 }
