@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Website</title>
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact</title>
 </head>
 <body>
     <!-- Header -->
@@ -21,7 +22,6 @@
                     <img src="/images/hamburgerMenu.png" alt="">
                 </div>
 
-
                 <div class="navbarList">
                     <ul id="navBarList">
                         <li class="close">
@@ -35,7 +35,7 @@
                                 <a href="#">The Team</a>
                             </div>
                         </div>
-                        <li class="menuItem"><a href="/contact.html">Contact</a></li>
+                        <li class="menuItem"><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,11 +45,31 @@
     </header>
     <!-- Body -->
     <div class="mainBody">
-        <div class="firstContent pageContent">
-            We are the cool company
-        </div>
-        <div class="pageContent">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi nobis ipsa voluptatum dolore, nostrum deserunt earum consequuntur quia impedit dolor quidem repellendus fugit. Illo deleniti ut numquam quasi sapiente distinctio?
+        <div id="contactForm">
+            Contact us using the form below
+            <form action="">
+                <div>
+                    <label for="firstName">First name</label><br>
+                    <input type="text" name="firstName" id="firstName" placeholder="Enter first name">
+                </div>
+                <br>
+                <div>
+                    <label for="lastName">Last name</label><br>
+                    <input type="text" name="lastName" id="lastName" placeholder="Enter last name">
+                </div>
+                <br>
+                <div>
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email" placeholder="Enter email address">
+                </div>
+                <br>
+                <div>
+                    <label for="messageBox">Enter message:</label><br>
+                    <textarea name="messageBox" id="messageBox" cols="40" rows="10" placeholder="Your message here..."></textarea>
+                </div>
+                <br>
+                <div><input type="submit" value="Send" id="submitButton"></div>
+            </form>
         </div>
     </div>
     <!-- Footer -->

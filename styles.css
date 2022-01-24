@@ -1,24 +1,25 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
 	vertical-align: baseline;
 }
 
-.body {
+.mainBody {
     display: flex;
     width: 80%;
     margin: 0 auto;
     padding: 10px;
     max-width: 1370px;
-    justify-content: space-around;
+    justify-content: center;
+    text-align: center;
 }
 
-.body div {
-    margin-bottom: 30px;
+.mainBody .pageContent {
+    margin: 30px 0;
+    flex: 1;
 }
 
 #mainHeader {
@@ -37,6 +38,7 @@
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+    box-shadow: 0 35px 50px black;
     /*
     position: fixed;
     bottom: 0;
@@ -162,8 +164,12 @@
         justify-content: space-around;
     }
   
-    .body {
+    .mainBody {
         flex-wrap: wrap;
+    }
+
+    .mainBody .pageContent {
+        flex: auto;
     }
 
     .container .logo {
