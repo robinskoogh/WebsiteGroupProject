@@ -17,12 +17,14 @@
 }
 
 .dropdownContent {
-    display: none;
+    display: block;
+    visibility: hidden;
     position: absolute;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    transition: all 500ms;
+    transition: ease 300ms;
+    opacity: 0;
 }
 
 .dropdownContent a {
@@ -44,7 +46,8 @@
 }
 
 .menuItem:hover .dropdownContent {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .container {
@@ -102,7 +105,9 @@
     padding: 0 10px;
 }
 
-
+.menuItem {
+    transition: 300ms;
+}
 
 .container .navbar ul .close {
     display: none;
@@ -117,7 +122,6 @@
     padding: 0 10px;
     cursor: pointer;
 }
-
 
 .container .navbar img {
     height: 32px;
