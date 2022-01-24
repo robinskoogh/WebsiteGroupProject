@@ -1,8 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+	vertical-align: baseline;
 }
 
 .body {
@@ -34,6 +37,7 @@
     text-decoration: none;
     display: block;
     text-align: left;
+    transition: 300ms;
 }
 
 .dropdownContent a:hover {
