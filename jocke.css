@@ -1,0 +1,33 @@
+@keyframes imgAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+.jContainer {
+    
+}
+
+.jImage {
+    position: relative;
+    object-fit: cover;
+    background-size: cover;
+    width: 100%;
+    height: 75%;
+    border-radius: 25px;
+    animation-name: imgAnimation;
+    animation-duration: 1s;
+}
+
+h6 {
+    position: relative;
+    font-size: xx-large;
+    width: 100%;
+    animation-name: imgAnimation;
+    animation-duration: 2s;
+}
+
+p {
+    position: relative;
+    animation-name: imgAnimation;
+    animation-duration: 4s;
+}
