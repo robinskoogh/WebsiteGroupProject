@@ -23,11 +23,47 @@ h6 {
     font-size: xx-large;
     width: 100%;
     animation-name: imgAnimation;
-    animation-duration: 2s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: both;
 }
 
 p {
     position: relative;
     animation-name: imgAnimation;
-    animation-duration: 4s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+
+#h1 {
+    animation-delay: 1s;
+}
+
+#h2 {
+    animation-delay: 2s;
+}
+
+#h3 {
+    animation-delay: 3s;
+}
+
+#p1 {
+    animation-delay: 4s;
+}
+
+#p2 {
+    animation-delay: 4.5s;
+}
+
+#p3 {
+    animation-delay: 5s;
+}
+
+#p4 {
+    animation-timing-function: step-end;
+    animation-fill-mode: backwards;
+    animation-delay: 5.5s;
 }
