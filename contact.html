@@ -47,7 +47,7 @@
     <div class="mainBody">
         <div id="contactForm">
             Contact us using the form below
-            <form action="">
+            <form action="" id="formContact">
                 <div>
                     <label for="firstName">First name</label><br>
                     <input type="text" name="firstName" id="firstName" placeholder="Enter first name">
@@ -68,7 +68,9 @@
                     <textarea name="messageBox" id="messageBox" cols="40" rows="10" placeholder="Your message here..."></textarea>
                 </div>
                 <br>
-                <div><input type="submit" value="Send" id="submitButton"></div>
+                <div>
+                    <input type="submit" value="Send" id="submitButton" onclick="Send()">
+                </div>
             </form>
         </div>
     </div>
@@ -78,5 +80,9 @@
     </footer>
 
     <script type="text/javascript" src="script.js"></script>
+    <!-- Används för att serialisera formulär-datan till json -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Används för att spara till fil -->
+    <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
 </body>
 </html>

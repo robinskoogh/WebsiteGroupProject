@@ -214,6 +214,7 @@
     .container .navbar .icon {
         content-visibility: visible;
         display: flex;
+        cursor: pointer;
     }
   
     .container .navbar ._Menus-show {

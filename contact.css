@@ -13,6 +13,7 @@
 
 #submitButton {
     width: 100px;
+    cursor: pointer;
 }
 
 textarea {
