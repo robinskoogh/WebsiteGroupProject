@@ -45,6 +45,9 @@
 
 .slideshow {
     position: relative;
+    max-height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 #slideshowPic {
@@ -64,11 +67,16 @@
     left: 5px;
     top: 5px;
     cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
 }
 
-.slideshowFrame {
-    max-height: 500px;
-    overflow: hidden;
+#playPause:hover {
+    background-color: rgba(49, 49, 49, 0.3)
+}
+
+#playPause.paused {
+    background-color: rgba(20, 20, 20, 0.8);
 }
 
 .prevImg, .nextImg {
@@ -91,7 +99,7 @@
 }
 
 .prevImg:hover, .nextImg:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .dropdownContent {
@@ -153,6 +161,7 @@
     height: 100%;
     overflow: auto;
     transition: left .3s;
+    z-index: 999;
 }
 
 .container .navbar ul li a {
@@ -198,10 +207,6 @@
 }
 
 @media (min-width: 768px) {
-    .mainBody {
-        flex-wrap: nowrap;
-    }
-
     .mainBody .contentContainer {
         flex: 1;
     }
@@ -209,6 +214,25 @@
     .container .logo {
         max-width: 232px;
         flex: auto;
+    }
+
+    .slideshow {
+        flex-basis: 100%;
+    }
+
+    #playPause {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        cursor: pointer;
+    }
+    
+    .prevImg, .nextImg {
+        top: 40%;
+        font-size: 40px;
+        padding: 15px;
     }
 
     .dropdownContent {

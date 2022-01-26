@@ -105,10 +105,12 @@ function playPause() {
     if (paused){
         paused = false;
         slideshow();
+        document.getElementById("playPause").className = "";
     }
     else {
         paused = true;
         stopSlideshow();
+        document.getElementById("playPause").className += "paused";
     }
 }
 
