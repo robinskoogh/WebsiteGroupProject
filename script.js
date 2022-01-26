@@ -128,3 +128,38 @@ function runSlideshow() {
 }
 
 window.onload = runSlideshow;
+
+
+// Email validation
+
+function validation() {
+    let form = document.getElementById("formContact");
+    let email = document.getElementById("email").value;
+    let validationText = document.getElementById("validationText");
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    let validationImgs = ["images/validIcon.png", "images/invalidIcon.png"];
+
+    if (email.match(pattern)){
+        form.classList.add("emailValid");
+        form.classList.remove("emailInvalid");
+        //document.getElementById("validateImg").src = validationImgs[0];
+        validationText.innerHTML = "&#10003;";
+
+        
+    }
+    else {
+        form.classList.remove("emailValid");
+        form.classList.add("emailInvalid");
+        // document.getElementById("validateImg").src = validationImgs[1];
+        validationText.innerHTML = "&#10006;";
+        
+    }
+
+    if (email == ""){
+        form.classList.remove("emailValid");
+        form.classList.remove("emailInvalid");
+        validationText.innerHTML = "";
+    }
+
+}

@@ -50,7 +50,7 @@
             <form action="" id="formContact">
                 <div>
                     <label for="firstName">First name</label><br>
-                    <input type="text" name="firstName" id="firstName" placeholder="Enter first name">
+                    <input type="text" name="firstName" id="firstName" placeholder="Enter first name" required>
                 </div>
                 <br>
                 <div>
@@ -60,12 +60,12 @@
                 <br>
                 <div>
                     <label for="email">Email</label><br>
-                    <input type="email" name="email" id="email" placeholder="Enter email address">
+                    <input type="email" name="email" id="email" placeholder="Enter email address" required onkeyup="validation()"><span id="validationText"></span>
                 </div>
                 <br>
                 <div>
                     <label for="messageBox">Enter message:</label><br>
-                    <textarea name="messageBox" id="messageBox" cols="40" rows="10" placeholder="Your message here..."></textarea>
+                    <textarea name="messageBox" id="messageBox" cols="40" rows="10" placeholder="Your message here..." required></textarea>
                 </div>
                 <br>
                 <div>

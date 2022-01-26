@@ -28,3 +28,16 @@ input {
 input[type=text], input[type=email] {
     padding: 4px;
 }
+
+#validationText {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#formContact.emailValid #validationText{
+    color: green;
+}
+
+#formContact.emailInvalid #validationText{
+    color: red;
+}
