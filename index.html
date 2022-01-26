@@ -45,10 +45,20 @@
 
     <!-- Body -->
     <div class="mainBody">
-        <div class="firstContent pageContent">
+        <div class="slideshow">
+            <div class="slides">
+                <div class="slideshowFrame">
+                    <img id="slideshowPic" alt="" width="100%">
+                    <a class="prevImg" onclick="prevImg()">&#10094;</a>
+                    <a class="nextImg" onclick="nextImg()">&#10095;</a>
+                    <a class="pauseSlides"><img id="playPause" onclick="playPause()" src="/images/play_pause.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="contentContainer">
             We are the cool company
         </div>
-        <div class="pageContent">
+        <div class="contentContainer">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi nobis ipsa voluptatum dolore, nostrum deserunt earum consequuntur quia impedit dolor quidem repellendus fugit. Illo deleniti ut numquam quasi sapiente distinctio?
         </div>
     </div>

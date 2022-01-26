@@ -58,3 +58,66 @@ function SaveToFile(data, filename, type) {
     var file = new Blob([data], {type: type});
     saveAs(file, filename);
 }
+
+// Slideshow 
+
+let i = 0;
+let timer;
+let path = ["images/slideshow/img1.jpg", "images/slideshow/img2.jpg", "images/slideshow/img3.jpg"];
+let paused = false;
+
+function slideshow() {
+    
+    document.getElementById("slideshowPic").className += "fade";
+    setTimeout(function() {
+        document.getElementById("slideshowPic").src = path[i];
+        document.getElementById("slideshowPic").className = "";
+    }, 1000);
+
+    i++;
+    if (i == path.length){
+        i = 0;
+    }
+
+    timer = setTimeout("slideshow()", 5000);
+
+}
+
+function prevImg(){
+    i-2;
+    if (i == -1){
+        i = path.length - 1;
+    }
+    stopSlideshow();
+    slideshow();
+}
+
+function nextImg() {
+    i++;
+    if (i == path.length){
+        i = 0;
+    }
+    stopSlideshow();
+    slideshow();
+}
+
+function playPause() {
+    if (paused){
+        paused = false;
+        slideshow();
+    }
+    else {
+        paused = true;
+        stopSlideshow();
+    }
+}
+
+function stopSlideshow() {
+    clearTimeout(timer)
+}
+
+function runSlideshow() {
+    slideshow();
+}
+
+window.onload = runSlideshow;

@@ -19,7 +19,7 @@
     margin-bottom: 100px;
 }
 
-.mainBody .pageContent {
+.mainBody .contentContainer {
     flex: auto;
     margin: 30px 0;
 }
@@ -41,11 +41,57 @@
     box-shadow: 0 35px 50px black;
     max-width: none;
     width: 100%;
-    /*
-    position: fixed;
-    bottom: 0;
+}
+
+.slideshow {
+    position: relative;
+}
+
+#slideshowPic {
     width: 100%;
-    */
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#slideshowPic.fade {
+    opacity: 0;
+}
+
+#playPause {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.slideshowFrame {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.prevImg, .nextImg {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+}
+
+.nextImg {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.prevImg {
+    left: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.prevImg:hover, .nextImg:hover {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .dropdownContent {
@@ -156,7 +202,7 @@
         flex-wrap: nowrap;
     }
 
-    .mainBody .pageContent {
+    .mainBody .contentContainer {
         flex: 1;
     }
 
