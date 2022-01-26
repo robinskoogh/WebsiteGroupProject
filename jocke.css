@@ -51,19 +51,18 @@ p {
 }
 
 #p1 {
-    animation-delay: 4s;
+    animation-delay: 3.5s;
 }
 
 #p2 {
-    animation-delay: 4.5s;
+    animation-delay: 4s;
 }
 
 #p3 {
-    animation-delay: 5s;
+    animation-delay: 4.5s;
 }
 
 #p4 {
     animation-timing-function: step-end;
-    animation-fill-mode: backwards;
-    animation-delay: 5.5s;
+    animation-delay: 4.5s;
 }
