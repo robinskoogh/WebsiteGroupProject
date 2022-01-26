@@ -90,15 +90,20 @@ function prevImg(){
     }
     stopSlideshow();
     slideshow();
+    if (paused){
+        stopSlideshow();
+    }
 }
 
 function nextImg() {
-    i++;
     if (i == path.length){
         i = 0;
     }
     stopSlideshow();
     slideshow();
+    if (paused){
+        stopSlideshow();
+    }
 }
 
 function playPause() {
