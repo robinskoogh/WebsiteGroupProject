@@ -31,22 +31,25 @@ function Send() {
     var email = document.forms["formContact"]["email"].value;
     var message = document.forms["formContact"]["messageBox"].value;
     if (firstName == "" || email == "" || message == "") {
-        ShowMsgBox();
-        ShowPopup("Message NOT sent.");
+        ShowMsgBox("Error!<br/>" + "Please provide necessary information.");
+        ShowPopup("Could not send message.");
         console.log("Error")
     }
     else {
-        ShowPopup("Message Sent!");
         var formData = JSON.stringify($("#formContact").serializeArray());
         console.log(formData);
-        DownloadFile(formData, "formdata.json", "text/plain;charset=utf-8");
+        ShowPopup("Message Sent!");
+        ShowMsgBox("JSON-form:<br/>" + formData);
+        //DownloadFile(formData, "formdata.json", "text/plain;charset=utf-8");
     }
 }
 
-function ShowMsgBox() {
+function ShowMsgBox(text) {
     var modal = document.getElementById("msgBox");
     var btn = document.getElementById("msgBoxButton");
     var span = document.getElementsByClassName("closeBox")[0];
+
+    document.getElementById("boxMessage").innerHTML = text;
 
     // When the user clicks on the button, open the modal
     // btn.onclick = function() {
