@@ -17,11 +17,18 @@
     justify-content: center;
     text-align: center;
     margin-bottom: 100px;
+    gap: 20px;
 }
 
 .mainBody .contentContainer {
     flex: auto;
-    margin: 30px 0;
+    margin: 10px 0;
+}
+
+.contentContainer {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    max-width: 75%;
 }
 
 .contentItem {
@@ -37,7 +44,7 @@
 #mainFooter {
     position: fixed;
     bottom: 0;
-    background: #f5f5f5;
+    background-color: #f5f5f5;
     color: black;
     text-align: center;
     padding: 20px;
@@ -260,6 +267,13 @@
 @media (min-width: 768px) {
     .mainBody .contentContainer {
         flex: 1;
+        margin: 10px 0;
+        max-width: 550px;
+    }
+
+    .mainBody {
+        gap: 30px;
+        column-gap: 100px;
     }
 
     .container .logo {
@@ -279,6 +293,28 @@
         line-height: 80px;
         cursor: pointer;
         padding: 0 10px;
+    }
+
+    #collab {
+        background: url("/images/collab.jpg");
+        background-size: cover;
+    }
+
+    #weBest {
+        background: url("/images/weBest.jpg");
+        background-size: cover;
+    }
+
+    .contentContainer {
+        display: flex;
+        min-height: 200px;
+    }
+
+    .contentItem {
+        align-self: flex-end;
+        background-color: rgba(228, 228, 228, 0.815);
+        border-radius: 10px;
+
     }
 
     .container .navbar ul li div a {
