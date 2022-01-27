@@ -78,10 +78,18 @@
                     <textarea name="messageBox" id="messageBox" cols="40" rows="10" placeholder="Your message here..." required></textarea>
                 </div>
                 <br>
-                <div>
-                    <input type="submit" value="Send" id="submitButton" onclick="Send()">
+                <div class = "popup">
+                    <span class="popuptext" id="popup"><p id="popText">Message Sent!</p></span>
+                    <input type="button" value="Send" id="submitButton" onclick="Send()">
+                    <!-- Använder vanlig button-type istället för submit för att undvika POST-metoden den kallar på (avbryter alla scripts..) -->
                 </div>
             </form>
+        </div>
+        <div id="msgBox" class="modal">
+            <div class="modal-content">
+            <span class="closeBox">&times;</span>
+            <p id="boxMessage">Error!</p>
+            </div>
         </div>
     </div>
     <!-- Footer -->
@@ -92,7 +100,5 @@
     <script type="text/javascript" src="script.js"></script>
     <!-- Används för att serialisera formulär-datan till json -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Används för att spara till fil -->
-    <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
 </body>
 </html>

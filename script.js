@@ -27,13 +27,62 @@ function MenuPress() {
 }
 
 function Send() {
-    var formData = JSON.stringify($("#formContact").serializeArray());
-
-    Download(formData, "formdata.json", "text/plain;charset=utf-8");
-    //SaveToFile(formData, "formadata.json", "text/plain;charset=utf-8");
+    var firstName = document.forms["formContact"]["email"].value;
+    var email = document.forms["formContact"]["email"].value;
+    var message = document.forms["formContact"]["messageBox"].value;
+    if (firstName == "" || email == "" || message == "") {
+        ShowMsgBox("Error!<br/>" + "Please provide necessary information.");
+        ShowPopup("Could not send message.");
+        console.log("Error")
+    }
+    else {
+        var formData = JSON.stringify($("#formContact").serializeArray());
+        console.log(formData);
+        ShowPopup("Message Sent!");
+        ShowMsgBox("JSON-form:<br/>" + formData);
+        //DownloadFile(formData, "formdata.json", "text/plain;charset=utf-8");
+    }
 }
 
-function Download(data, filename, type) {
+function ShowMsgBox(text) {
+    var modal = document.getElementById("msgBox");
+    var btn = document.getElementById("msgBoxButton");
+    var span = document.getElementsByClassName("closeBox")[0];
+
+    document.getElementById("boxMessage").innerHTML = text;
+
+    // When the user clicks on the button, open the modal
+    // btn.onclick = function() {
+    modal.style.display = "block";
+    //}
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+    }
+}
+
+function ShowPopup(text) {
+    var popup = document.getElementById("popup");
+
+    document.getElementById("popText").innerHTML = text;
+    
+    popup.classList.toggle("show");
+
+    var delay = 2000;
+    setTimeout(function() {
+    popup.classList.toggle("hide");
+    }, delay);
+  }
+
+function DownloadFile(data, filename, type) {
     var file = new Blob([data], {type: type});
 
     if (window.navigator.msSaveOrOpenBlob) {
@@ -47,17 +96,12 @@ function Download(data, filename, type) {
         document.body.appendChild(a);
         a.click();
         // setTimeout(function() {
-            //     document.body.removeChild(a);
-            //     window.URL.revokeObjectURL(url);  
-            // }, 0); 
+        //         document.body.removeChild(a);
+        //         window.URL.revokeObjectURL(url);  
+        //     }, 0); 
         }
     console.log("JSON file has been saved.");
     }
-
-function SaveToFile(data, filename, type) {
-    var file = new Blob([data], {type: type});
-    saveAs(file, filename);
-}
 
 // Slideshow 
 
@@ -161,5 +205,4 @@ function validation() {
         form.classList.remove("emailInvalid");
         validationText.innerHTML = "";
     }
-
 }
