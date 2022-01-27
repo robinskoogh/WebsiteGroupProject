@@ -1,4 +1,7 @@
-var navMenuList = document.getElementById("navBarList");
+
+// Mobile menubar
+
+let navMenuList = document.getElementById("navBarList");
 
 function Show() {
     if (navMenuList.classList.contains("_Menus-show") ?? false){
@@ -12,9 +15,6 @@ function Show() {
 function Hide(){
     navMenuList.classList.remove("_Menus-show");
 }
-
-
-
 
 function MenuPress() {
     if (navMenuList.classList.contains("_Menus-show") ?? false){
@@ -176,33 +176,31 @@ window.onload = runSlideshow;
 
 // Email validation
 
+emailValid = false;
+
 function validation() {
     let form = document.getElementById("formContact");
     let email = document.getElementById("email").value;
     let validationText = document.getElementById("validationText");
     let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-    let validationImgs = ["images/validIcon.png", "images/invalidIcon.png"];
-
     if (email.match(pattern)){
         form.classList.add("emailValid");
         form.classList.remove("emailInvalid");
-        //document.getElementById("validateImg").src = validationImgs[0];
-        validationText.innerHTML = "&#10003;";
-
-        
+        validationText.innerHTML = "&#10003;";  
+        emailValid = true;  
     }
     else {
         form.classList.remove("emailValid");
         form.classList.add("emailInvalid");
-        // document.getElementById("validateImg").src = validationImgs[1];
         validationText.innerHTML = "&#10006;";
-        
+        emailValid = false;
     }
 
     if (email == ""){
         form.classList.remove("emailValid");
         form.classList.remove("emailInvalid");
         validationText.innerHTML = "";
+        emailValid = false;
     }
 }
