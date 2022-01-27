@@ -35,7 +35,7 @@ input[type=text], input[type=email] {
 }
 
 #formContact.emailValid #validationText{
-    color: green;
+    color: rgb(0, 190, 0);
 }
 
 #formContact.emailInvalid #validationText{
