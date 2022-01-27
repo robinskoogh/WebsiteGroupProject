@@ -31,16 +31,16 @@ function Send() {
     var email = document.forms["formContact"]["email"].value;
     var message = document.forms["formContact"]["messageBox"].value;
     if (firstName == "" || email == "" || message == "") {
-        ShowMsgBox("Error!<br/>" + "Please provide necessary information.");
+        ShowMsgBox("Error!<br/>Please provide necessary information.");
         ShowPopup("Could not send message.");
         console.log("Error")
     }
     else {
         var formData = JSON.stringify($("#formContact").serializeArray());
         console.log(formData);
-        ShowPopup("Message Sent!");
-        ShowMsgBox("JSON-form:<br/>" + formData);
-        //DownloadFile(formData, "formdata.json", "text/plain;charset=utf-8");
+        ShowPopup("Message sent!");
+        ShowMsgBox("JSON-data:<br/>" + formData);
+        DownloadFile(formData, "formdata.json", "text/plain;charset=utf-8");
     }
 }
 
@@ -73,7 +73,7 @@ function ShowPopup(text) {
     var popup = document.getElementById("popup");
 
     document.getElementById("popText").innerHTML = text;
-    
+
     popup.classList.toggle("show");
 
     var delay = 2000;

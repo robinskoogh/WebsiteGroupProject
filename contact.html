@@ -47,7 +47,8 @@
     <div class="mainBody">
         <div id="contactForm">
             Contact us using the form below
-            <form action="" id="formContact">
+            <!-- return false för att inte uppdatera sidan (förhindrar javascript från att köras) -->
+            <form action="" id="formContact" onsubmit="return false">
                 <div>
                     <label for="firstName">First name</label><br>
                     <input type="text" name="firstName" id="firstName" placeholder="Enter first name" required>
@@ -80,8 +81,8 @@
                 <br>
                 <div class = "popup">
                     <span class="popuptext" id="popup"><p id="popText">Message Sent!</p></span>
-                    <input type="button" value="Send" id="submitButton" onclick="Send()">
-                    <!-- Använder vanlig button-type istället för submit för att undvika POST-metoden den kallar på (avbryter alla scripts..) -->
+                    <input type="submit" value="Send" id="submitButton" onclick="Send()">
+                    <!-- input type="button" gör så att valideringsinstruktioner ej körs -->
                 </div>
             </form>
         </div>
