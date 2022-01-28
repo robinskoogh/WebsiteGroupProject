@@ -50,7 +50,7 @@
             <form action="" id="formContact" onsubmit="return false">
                 <div>
                     <label for="name">Name</label><br>
-                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                    <input type="text" onkeyup="formValidation()" name="name" id="name" placeholder="Enter your name" required>
                 </div>
                 <br>
                 <div>
@@ -60,7 +60,7 @@
                 <br>
                 <div>
                     <label for="email">Email</label><br>
-                    <input type="email" name="email" id="email" placeholder="Enter email address" required onkeyup="validation()"><span id="validationText"></span>
+                    <input type="email" name="email" id="email" placeholder="Enter email address" required onkeyup="emailValidation()"><span id="validationText"></span>
                 </div>
                 <br>
                 <div>
@@ -70,12 +70,12 @@
                 <br>
                 <div>
                     <label for="messageBox">Enter message:</label><br>
-                    <textarea name="messageBox" id="messageBox" cols="40" rows="8" placeholder="Your message here..." required></textarea>
+                    <textarea name="messageBox" onkeyup="formValidation()" id="messageBox" cols="40" rows="8" placeholder="Your message here..." required></textarea>
                 </div>
                 <br>
                 <div class = "popup">
                     <span class="popuptext" id="popup"><p id="popText">Message Sent!</p></span>
-                    <input disabled type="submit" value="Send" id="submitButton" onclick="Send()">
+                    <input type="submit" value="Send" id="submitButton" disabled>
                     <!-- input type="button" gör så att valideringsinstruktioner ej körs -->
                 </div>
 
