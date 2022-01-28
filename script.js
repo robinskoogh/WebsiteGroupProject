@@ -178,7 +178,7 @@ window.onload = runSlideshow;
 
 emailValid = false;
 
-function validation() {
+function emailValidation() {
     let form = document.getElementById("formContact");
     let email = document.getElementById("email").value;
     let validationText = document.getElementById("validationText");
@@ -203,7 +203,33 @@ function validation() {
         validationText.innerHTML = "";
         emailValid = false;
     }
+
+    formValidation();
 }
 
 // Form validation of required inputs
 
+nameValid = false;
+messageValid = false;
+
+function formValidation() {
+    let message = document.getElementById("messageBox").value;
+    let name = document.getElementById("name").value;
+    let button = document.getElementById("submitButton");
+
+    if (name != "" && message != ""){
+        nameValid = true;
+        messageValid = true;
+    }
+    else {
+        nameValid = false;
+        messageValid = false;
+    }
+
+    if (emailValid && nameValid && messageValid){
+        button.disabled = false;
+    }
+    else {
+        button.disabled = true;
+    }
+}
