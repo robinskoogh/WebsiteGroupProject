@@ -27,31 +27,23 @@ function MenuPress() {
 }
 
 function Send() {
-    var firstName = document.forms["formContact"]["email"].value;
-    var email = document.forms["formContact"]["email"].value;
-    var message = document.forms["formContact"]["messageBox"].value;
-    if (firstName == "" || email == "" || message == "") {
-        ShowMsgBox("Error!<br/>Please provide necessary information.");
+    var tel = document.getElementById("phoneNumber").value;
+    let pattern = /[0-9]+/;
+    if (!tel.match(pattern)) {
         ShowPopup("Could not send message.");
-        console.log("Error")
+        console.log("Error");
     }
     else {
         var formData = JSON.stringify($("#formContact").serializeArray());
         console.log(formData);
         ShowPopup("Message sent!");
-        ShowMsgBox("JSON-data:<br/>" + formData);
-        DownloadFile(formData, "formdata.json", "text/plain;charset=utf-8");
-        //Fulkod för att cleara formuläret..
-        var delay = 2000;
-        setTimeout(function() {
-        location.reload();
-        }, delay);
+        alert("ligger du kvar?");
     }
 }
 
 function ShowMsgBox(text) {
     var modal = document.getElementById("msgBox");
-    var btn = document.getElementById("msgBoxButton");
+    //var btn = document.getElementById("msgBoxButton");
     var span = document.getElementsByClassName("closeBox")[0];
 
     document.getElementById("boxMessage").innerHTML = text;
@@ -70,6 +62,7 @@ function ShowMsgBox(text) {
     window.onclick = function(event) {
         if (event.target == modal) {
         modal.style.display = "none";
+        location.reload();
         }
     }
 }
@@ -91,6 +84,7 @@ function SaveFile() {
     var formData = JSON.stringify($("#formContact").serializeArray());
     console.log(formData);
     DownloadFile(formData, "formdata.json", "text/plain;charset=utf-8");
+    ShowMsgBox("JSON-data:<br/>" + formData);
 }
 
 function DownloadFile(data, filename, type) {
