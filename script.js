@@ -174,7 +174,7 @@ function runSlideshow() {
 window.onload = runSlideshow;
 
 
-// Email validation
+// Email live validation
 
 emailValid = false;
 
@@ -204,3 +204,6 @@ function validation() {
         emailValid = false;
     }
 }
+
+// Form validation of required inputs
+
