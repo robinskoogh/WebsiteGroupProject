@@ -41,6 +41,11 @@ function Send() {
         ShowPopup("Message sent!");
         ShowMsgBox("JSON-data:<br/>" + formData);
         DownloadFile(formData, "formdata.json", "text/plain;charset=utf-8");
+        //Fulkod för att cleara formuläret..
+        var delay = 2000;
+        setTimeout(function() {
+        location.reload();
+        }, delay);
     }
 }
 
