@@ -49,18 +49,13 @@
             <!-- return false för att inte uppdatera sidan (förhindrar javascript från att köras) -->
             <form action="" id="formContact" onsubmit="return false">
                 <div>
-                    <label for="firstName">First name</label><br>
-                    <input type="text" name="firstName" id="firstName" placeholder="Enter first name" required>
-                </div>
-                <br>
-                <div>
-                    <label for="lastName">Last name</label><br>
-                    <input type="text" name="lastName" id="lastName" placeholder="Enter last name">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
                 </div>
                 <br>
                 <div>
                     <label for="phoneNumber">Phone number</label><br>
-                    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Enter phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    <input type="tel" pattern="[0-9]+" name="phoneNumber" id="phoneNumber" placeholder="(optional)">
                 </div>
                 <br>
                 <div>
@@ -75,12 +70,12 @@
                 <br>
                 <div>
                     <label for="messageBox">Enter message:</label><br>
-                    <textarea name="messageBox" id="messageBox" cols="40" rows="10" placeholder="Your message here..." required></textarea>
+                    <textarea name="messageBox" id="messageBox" cols="40" rows="8" placeholder="Your message here..." required></textarea>
                 </div>
                 <br>
                 <div class = "popup">
                     <span class="popuptext" id="popup"><p id="popText">Message Sent!</p></span>
-                    <input type="submit" value="Send" id="submitButton" onclick="Send()">
+                    <input disabled type="submit" value="Send" id="submitButton" onclick="Send()">
                     <!-- input type="button" gör så att valideringsinstruktioner ej körs -->
                 </div>
             </form>
