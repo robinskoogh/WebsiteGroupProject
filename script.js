@@ -87,6 +87,12 @@ function ShowPopup(text) {
     }, delay);
   }
 
+function SaveFile() {
+    var formData = JSON.stringify($("#formContact").serializeArray());
+    console.log(formData);
+    DownloadFile(formData, "formdata.json", "text/plain;charset=utf-8");
+}
+
 function DownloadFile(data, filename, type) {
     var file = new Blob([data], {type: type});
 
