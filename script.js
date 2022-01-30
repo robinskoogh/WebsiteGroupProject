@@ -42,26 +42,26 @@ function Send() {
 }
 
 function ShowMsgBox(text) {
-    var modal = document.getElementById("msgBox");
+    var box = document.getElementById("msgBox");
     //var btn = document.getElementById("msgBoxButton");
-    var span = document.getElementsByClassName("closeBox")[0];
+    var closeBtn = document.getElementsByClassName("closeBox")[0];
 
     document.getElementById("boxMessage").innerHTML = text;
 
     // When the user clicks on the button, open the modal
     // btn.onclick = function() {
-    modal.style.display = "block";
+    box.style.display = "block";
     //}
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-    modal.style.display = "none";
+    // Stäng boxen på kryss.
+    closeBtn.onclick = function() {
+    box.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
+    // När man klickar utanför boxen, stäng den och reloada sidan (töm formuläret).
     window.onclick = function(event) {
-        if (event.target == modal) {
-        modal.style.display = "none";
+        if (event.target == box) {
+        box.style.display = "none";
         location.reload();
         }
     }
@@ -238,3 +238,17 @@ function formValidation() {
         button.disabled = true;
     }
 }
+
+const startAnimation = (entries, observer) => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle("barWidth", entry.isIntersecting);
+    });
+  };
+  
+  const observer = new IntersectionObserver(startAnimation);
+  const options = { root: null, rootMargin: '0px', threshold: 1 }; 
+  
+  const elements = document.querySelectorAll('.bar1');
+  elements.forEach(el => {
+    observer.observe(el, options);
+  });

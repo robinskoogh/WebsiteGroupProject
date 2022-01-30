@@ -8,6 +8,37 @@
     to {opacity: 1;}
 }
 
+@keyframes barSize {
+    from {size: 0;}
+    to {size: 1;}
+}
+
+@-webkit-keyframes barSize {
+    from {size: 0;}
+    to {size: 1;}
+}
+
+@keyframes barWidth {
+    from {width: 0;}
+    to {width: 1;}
+}
+
+@-webkit-keyframes barWidth {
+    from {width: 0;}
+    to {width: 1;}
+}
+
+@keyframes barHover {
+    from {border: 0;}
+    to {border: 1;}
+}
+
+@-webkit-keyframes barHover {
+    from {border: 0;}
+    to {border: 2px solid #ddd;}
+}
+
+
 .jContainer {
     
 }
@@ -23,20 +54,6 @@
     animation-name: imgAnimation;
     animation-duration: 1s;
 }
-
-/* @media (min-width: 720px) {
-    .jImage {
-        width: 25%;
-        height: 22,5%;
-    }
-}
-
-@media (min-width: 1080px) {
-    .jImage {
-        width: 25%;
-        height: 22,5%;
-    }
-} */
 
 h6 {
     position: relative;
@@ -84,15 +101,18 @@ p {
 
 #p4 {
     animation-timing-function: step-end;
-    animation-delay: 4.5s;
+    animation-delay: 6.5s;
 }
 
 .diagramContainer {
     display: flex;
+    position: relative;
     justify-content: center;
+    align-self: center;
+    align-content: center;
 }
 
-dl {
+.diagram {
     display: flex;
     background-color: white;
     flex-direction: column;
@@ -102,8 +122,9 @@ dl {
     padding: 20px;
 }
   
-dt {
-    align-self: center;
+.diagramTitle {
+    justify-content: left;
+    align-self: flex-end;
     width: 100%;
     font-weight: 700;
     display: block;
@@ -114,16 +135,14 @@ dt {
     margin-left: 130px;
 }
 
-.text {
+.diagramText {
     font-weight: 600;
     display: flex;
+    position: absolute;
     align-items: center;
     height: 50px;
-    width: 130px;
-    background-color: white;
-    position: absolute;
     left: 0;
-    justify-content: flex-end;
+    background-color: white;
 }
 
 .percentage {
@@ -132,9 +151,10 @@ dt {
     font-size: .8em;
     line-height: 1;
     text-transform: uppercase;
-    width: 100%;
+    width: 80%;
     height: 50px;
-    margin-left: 130px;
+    margin-left: 75px;
+    margin-right: 200px;
     background: repeating-linear-gradient(
         to right,
         #ddd,
@@ -143,32 +163,75 @@ dt {
         #fff 10%
     );
     border-right: 1px solid #ddd;
+    animation-name: imgAnimation, barWidth;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 5.5s;
+    animation-fill-mode: both;
 }
 
 .bar-1 {
     position: relative;
     background-color:lawngreen;
     width: 90%;
-    left: 1px;
-    padding: 2%;
+    height: 75%;
+    padding: 12px;
     text-align: right;
+    animation-name: imgAnimation, barWidth, barSize;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 6.5s;
+    animation-fill-mode: both;
 }
 
 .bar-2 {
     position: relative;    
-    background-color:rgb(255, 72, 0);
+    background-color:rgb(255, 75, 0);
     width: 25%;
-    left: 1px;
-    padding: 2%;
+    height: 75%;
+    padding: 12px;
     text-align: right;
+    animation-name: imgAnimation, barWidth, barSize;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 7s;
+    animation-fill-mode: both;
 }
 
 .bar-3 {
     position: relative;    
     background-color:yellow;
     width: 45%;
-    left: 1px;
-    padding: 2%;
+    height: 75%;
+    padding: 12px;
     text-align: right;
-    
+    animation-name: imgAnimation, barWidth, barSize;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 7.5s;
+    animation-fill-mode: both;
+}
+
+.bar-1:hover {
+    /* animation-name: barHover;
+    animation-duration: 0,5s;
+    animation-timing-function: ease-in-out; */
+    background-color: rgb(160, 255, 65);
+    border: 2px solid #ddd;
+}
+
+.bar-2:hover {
+    /* animation-name: barHover;
+    animation-duration: 0,5s;
+    animation-timing-function: ease-in-out; */
+    background-color: rgb(255, 110, 47);
+    border: 2px solid #ddd;
+}
+
+.bar-3:hover {
+    /* animation-name: barHover;
+    animation-duration: 0,5s;
+    animation-timing-function: ease-in-out; */
+    background-color: rgb(252, 252, 125); 
+    border: 2px solid #ddd;
 }
