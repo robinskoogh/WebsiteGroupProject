@@ -4,18 +4,18 @@ let barChart = document.getElementById("skillsBar");
 
 function skillBarChange() {
     if (toggleSlider.checked == false){
-        barChart.style.display = "block";
+        barChart.style.display = "";
         pieChart.style.display = "none";
     }
     else {
         barChart.style.display = "none";
-        pieChart.style.display = "block";
+        pieChart.style.display = "";
     }
 }
 
 function setStartState() {
     barChart.style.display = "none";
-    pieChart.style.display = "block";
+    pieChart.style.display = "";
 }
 
 window.onload = setStartState;
