@@ -54,6 +54,7 @@
     box-shadow: 0 35px 50px black;
     max-width: none;
     width: 100%;
+    z-index: 999;
 }
 
 .introduction {

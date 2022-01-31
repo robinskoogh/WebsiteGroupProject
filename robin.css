@@ -2,3 +2,255 @@
     border-radius: 50%;
     box-shadow: 0 0 20px;
 }
+
+#tagLine {
+    color: coral;
+}
+
+@property --percentage{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+  
+.pie {
+    --percentage:20;
+    --border-radius:12px;
+    --color:darkred;
+    --width:120px;
+
+    width: var(--width);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 15px;
+    place-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.skillsDescription {
+    flex-basis: 100%;
+}
+
+.skillsPie div {
+    opacity: 85%;
+}
+
+#pCsharp {
+    --percentage:90;
+    --color: blueviolet;
+}
+
+#pSql {
+    --percentage:55;
+    --color: rgb(68, 172, 90);
+}
+
+#pHtml {
+    --percentage:75;
+    --color: orangered;
+}
+
+#pCss {
+    --percentage:40;
+    --color:blue;
+}
+
+#pJs {
+    --percentage:25;
+    --color: rgb(255, 208, 0);
+}
+
+
+#pAspNet {
+    --percentage:15;
+    --color: rgb(43, 188, 255);
+}
+
+#barChart {
+    display: block;
+    min-height: 200px;
+    min-width: 450px;
+    margin: auto;
+}
+
+#barChart tbody {
+    overflow: hidden;
+}
+
+#barChart tbody th {
+    background-color: #fff;
+    z-index: 1;
+}
+
+#barChart tbody td {
+    animation: animate-bars 5s .5s both;
+    animation-duration: 10s;
+    opacity: 85%;
+}
+
+#bCsharp {
+    --size: 0.9;
+    --color: blueviolet;
+}
+
+#bCss {
+    --size: 0.4;
+    --color:blue;
+}
+
+#bHtml {
+    --size:0.75;
+    --color: orangered;
+}
+
+#bJs {
+    --size: 0.25;
+    --color: rgb(255, 208, 0);
+}
+
+#bSql {
+    --size: 0.55;
+    --color: rgb(68, 172, 90);
+}
+
+#bAspNet {
+    --size: 0.15;
+    --color: rgb(43, 188, 255);
+}
+
+
+
+.pie:before,
+.pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pie:before {
+    inset: 0;
+    background:
+        radial-gradient(farthest-side,var(--color) 98%,#0000) top/var(--border-radius) var(--border-radius) no-repeat,
+        conic-gradient(var(--color) calc(var(--percentage)*1%),#0000 0);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(99% - var(--border-radius)),#000 calc(100% - var(--border-radius)));
+            mask: radial-gradient(farthest-side,#0000 calc(99% - var(--border-radius)),#000 calc(100% - var(--border-radius)));
+}
+
+.pie:after {
+    inset: calc(50% - var(--border-radius)/2);
+    background: var(--color);
+    transform: rotate(calc(var(--percentage)*3.6deg)) translateY(calc(50% - var(--width)/2));
+}
+
+.animate {
+    animation: p 2.5s .5s both;
+}
+
+@keyframes animate-bars {
+    0% { transform: translateX(-101%); }
+    15% { transform: translateX(0);}
+}
+
+@keyframes p{
+    from{--percentage:0}
+}
+
+
+@media (min-width: 620px){
+    #barChart {
+        min-width: 600px;
+    }
+}
+
+@media (min-width: 768px) {
+    #barChart {
+        min-height: 300px;
+        min-width: 750px;
+        margin: auto;
+        font-size: 17px;
+    }
+
+    #aboutMe {
+        display: flex;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+    #barChart tbody th {
+        min-width: 90px;
+        padding-right: 2px;
+    }
+
+    .pie {
+        --color:darkred;
+        --width:150px;
+    
+        aspect-ratio: 1;
+        position: relative;
+        display: inline-grid;
+        place-content: center;
+        font-size: 25px;
+    }
+
+    #aboutMe p {
+        max-width: 550px;
+    }
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+  
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+  /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
