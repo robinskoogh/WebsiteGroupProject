@@ -54,6 +54,7 @@
     box-shadow: 0 35px 50px black;
     max-width: none;
     width: 100%;
+    z-index: 999;
 }
 
 .introduction {
@@ -81,6 +82,10 @@
     font-size: 30px;
     font-style: italic;
     color: lightseagreen;
+}
+
+#description {
+    font-size: 16px;
 }
 
 .workWithUs {
@@ -267,8 +272,34 @@
     top: 80px;
 }
 
+.aContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 10px;
+    flex-basis: 50%;
+    justify-content: center;
+}
+
+.aContainer p {
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    color:rgb(209, 118, 0);
+}
+
+.aContainer a {
+    text-decoration: none;
+    color: black;
+}
+
+.aItem {
+    flex-basis: 100%;
+}
+
+
 @media (min-width: 768px) {
-    .mainBody .contentContainer {
+    .mainBody .contentContainer, .aContainer {
         flex: 1;
         margin: 10px 0;
         max-width: 550px;
@@ -359,6 +390,10 @@
         font-style: italic;
         color: lightseagreen;
     }
+
+    #description {
+        font-size: 18px;
+    }
     
     .workWithUs {
         margin: 30px 0;
@@ -423,7 +458,9 @@
         transition: none;
     }
 
-    
+    .aContainer p {
+        font-size: 26px;
+    }
 
     #navBarList {
         top: auto;

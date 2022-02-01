@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesMF.css">
-    <title>Website</title>
+    <link rel="stylesheet" href="robin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <title>Robin</title>
 </head>
 <body>
     <!-- Header -->
@@ -20,7 +22,6 @@
                 <div class="icon" onclick="Show()">
                     <img src="/images/hamburgerMenu.png" alt="">
                 </div>
-
 
                 <div class="navbarList">
                     <ul id="navBarList">
@@ -45,7 +46,75 @@
 
     <!-- Body -->
     <div class="mainBody">
-        
+        <div class="introduction">
+            <div class="introImg">
+                <img src="/images/yo.png" alt="">
+            </div>
+            <div class="introText">
+                <p id="tagLine">Yippee kayay y'all!</p>
+                <br>
+                <p><em><strong>It's me, your friendly neighborhood programmer!</strong></em></p>
+                <div id="aboutMe">
+                    <p>I have always had a keen interest for computers and technology and from time to time have nosed around in the programming area of things. It was not until 2021 that I finally decided to pursue a career within the programming field.</p>
+                    <p>This is another paragraph. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, exercitationem nisi repudiandae neque nihil nulla reiciendis quae dolor fugiat ut obcaecati tempore natus officiis nesciunt illum praesentium amet corrupti velit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="skillsDiv">
+            <div class="skillsDescription">
+                <span>Some of my programming skills<br><br> Toggle Bar/Piechart</span>
+                <label class="switch">
+                    <input type="checkbox" id="toggleSwitch">
+                    <span class="slider" onclick="skillBarChange()"></span>
+                </label><br>
+            </div>
+            <div class="skillsPie" id="skillsPie">
+                <div class="pie" id="pCsharp">C#</div>
+                <div class="pie" id="pSql">SQL</div>
+                <div class="pie" id="pHtml">HTML</div>
+                
+                <div class="pie" id="pCss">CSS</div>
+                <div class="pie" id="pJs">JS</div>
+                <div class="pie" id="pAspNet">ASP.NET</div>
+            </div>
+            <div class="skillsBar" id="skillsBar">
+                <table id="barChart" class="charts-css bar show-4-secondary-axes show-labels">
+                    <caption>My programming knowledge</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Language</th>
+                            <th scope="col">Knowledge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">C#</th>
+                            <td id="bCsharp"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">SQL</th>
+                            <td id="bSql"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">HTML</th>
+                            <td id="bHtml"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CSS</th>
+                            <td id="bCss"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">JavaScript</th>
+                            <td id="bJs"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ASP.NET</th>
+                            <td id="bAspNet"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
     
@@ -56,5 +125,6 @@
 
 
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="robinScript.js"></script>
 </body>
 </html>
