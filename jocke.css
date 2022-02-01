@@ -192,6 +192,7 @@ p {
 
 .bar-1 {
     position: relative;
+    visibility: visible;
     background-color:lawngreen;
     width: 90%;
     height: 75%;
@@ -202,6 +203,8 @@ p {
     animation-timing-function: ease-in-out;
     animation-delay: 6.5s;
     animation-fill-mode: both;
+    cursor: default;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .bar-2 {
@@ -216,6 +219,8 @@ p {
     animation-timing-function: ease-in-out;
     animation-delay: 7s;
     animation-fill-mode: both;
+    cursor: default;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .bar-3 {
@@ -230,9 +235,11 @@ p {
     animation-timing-function: ease-in-out;
     animation-delay: 7.5s;
     animation-fill-mode: both;
+    cursor: default;
+    border-radius: 0px 10px 10px 0px;
 }
 
-.bar-1:hover {
+.bar-1:hover{
     /* animation-name: barHover;
     animation-duration: 0,5s;
     animation-timing-function: ease-in-out; */
@@ -278,4 +285,18 @@ p {
     animation-timing-function: ease-in-out;
     animation-delay: 7.5s;
     animation-fill-mode: both;
+}
+
+.tooltip {
+    display: flex;
+    visibility: hidden;
+    position: fixed;
+    justify-content: center;
+    background: #ddd;
+    z-index: 1;
+    margin: -18.5%;
+    margin-left: 0;
+    padding: 0.5%;
+    border-radius: 10vh 10vh;
+    text-align: center;
 }

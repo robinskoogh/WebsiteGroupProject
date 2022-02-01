@@ -239,16 +239,28 @@ function formValidation() {
     }
 }
 
-const startAnimation = (entries, observer) => {
-    entries.forEach(entry => {
-      entry.target.classList.toggle("barWidth", entry.isIntersecting);
-    });
-  };
-  
-  const observer = new IntersectionObserver(startAnimation);
-  const options = { root: null, rootMargin: '0px', threshold: 1 }; 
-  
-  const elements = document.querySelectorAll('.bar1');
-  elements.forEach(el => {
-    observer.observe(el, options);
-  });
+function ShowTooltip(id) {
+    var tooltip = document.querySelectorAll('.tooltip');
+    document.getElementById(id).style.visibility = "visible";
+    document.addEventListener('mousemove', fn, false);
+
+    function fn(e) {
+        for (var i=tooltip.length; i--;) {
+            tooltip[i].style.left = e.pageX + 'px';
+            tooltip[i].style.top = e.pageY + 'px';
+        }
+    }
+}
+
+function HideTooltip(id) {
+    var tooltip = document.querySelectorAll('.tooltip');
+    document.getElementById(id).style.visibility = "hidden";
+    document.addEventListener('mousemove', fn, false);
+
+    function fn(e) {
+        for (var i=tooltip.length; i--;) {
+            tooltip[i].style.left = e.pageX + 'px';
+            tooltip[i].style.top = e.pageY + 'px';
+        }
+    }
+}
