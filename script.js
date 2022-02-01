@@ -53,12 +53,13 @@ function ShowMsgBox(text) {
     // Visa box.
     box.style.display = "block";
 
-    // Stäng boxen på kryss.
+    // Stäng boxen på kryss och uppdatera sidan (töm formulär).
     closeBtn.onclick = function() {
     box.style.display = "none";
+    location.reload();
     }
 
-    // När man klickar utanför boxen, stäng den och reloada sidan (töm formuläret).
+    // När man klickar utanför boxen, stäng den och uppdatera sidan (töm formulär).
     window.onclick = function(event) {
         if (event.target == box) {
         box.style.display = "none";

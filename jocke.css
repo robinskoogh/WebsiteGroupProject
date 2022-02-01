@@ -174,79 +174,64 @@ p {
     animation-fill-mode: both;
 }
 
-.bar-1 {
+.bar {
     position: relative;
     visibility: visible;
+    background-color:black;
+    width: 100%;
+    height: 75%;
+    padding: 12px;
+    text-align: right;
+    animation-name: opacityAnim, widthAnim, heightAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    cursor: default;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#bar-1 {
     background-color:lawngreen;
     width: 90%;
-    height: 75%;
-    padding: 12px;
-    text-align: right;
-    animation-name: opacityAnim, widthAnim, heightAnim;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
     animation-delay: 6.5s;
-    animation-fill-mode: both;
-    cursor: default;
-    border-radius: 0px 10px 10px 0px;
 }
 
-.bar-2 {
-    position: relative;    
+#bar-2 {
     background-color:rgb(255, 75, 0);
     width: 25%;
-    height: 75%;
-    padding: 12px;
-    text-align: right;
-    animation-name: opacityAnim, widthAnim, heightAnim;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
     animation-delay: 7s;
-    animation-fill-mode: both;
-    cursor: default;
-    border-radius: 0px 10px 10px 0px;
 }
 
-.bar-3 {
-    position: relative;    
+#bar-3 {
     background-color:yellow;
     width: 45%;
-    height: 75%;
-    padding: 12px;
-    text-align: right;
-    animation-name: opacityAnim, widthAnim, heightAnim;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
     animation-delay: 7.5s;
-    animation-fill-mode: both;
-    cursor: default;
-    border-radius: 0px 10px 10px 0px;
 }
 
-.bar-1:hover{
+#bar-1:hover{
     background-color: rgb(160, 255, 65);
     border: 2px solid #ddd;
 }
 
-.bar-2:hover {
+#bar-2:hover {
     background-color: rgb(255, 110, 47);
     border: 2px solid #ddd;
 }
 
-.bar-3:hover {
+#bar-3:hover {
     background-color: rgb(252, 252, 125); 
     border: 2px solid #ddd;
 }
 
-.text1 {    
+#text1 {    
     animation-delay: 6.5s;
 }
 
-.text2 {
+#text2 {
     animation-delay: 7s;
 }
 
-.text3 {
+#text3 {
     animation-delay: 7.5s;
 }
 
