@@ -288,15 +288,12 @@ p {
 }
 
 .tooltip {
-    display: flex;
-    visibility: hidden;
+    display: block;
     position: fixed;
-    justify-content: center;
+    visibility: hidden;
     background: #ddd;
     z-index: 1;
-    margin: -18.5%;
-    margin-left: 0;
-    padding: 0.5%;
-    border-radius: 10vh 10vh;
+    padding: 10px;
+    border-radius: 10px 10px;
     text-align: center;
 }

@@ -240,27 +240,17 @@ function formValidation() {
 }
 
 function ShowTooltip(id) {
-    var tooltip = document.querySelectorAll('.tooltip');
-    document.getElementById(id).style.visibility = "visible";
-    document.addEventListener('mousemove', fn, false);
+    var tooltip = document.getElementById(id);
+    tooltip.style.visibility = "visible";
 
-    function fn(e) {
-        for (var i=tooltip.length; i--;) {
-            tooltip[i].style.left = e.pageX + 'px';
-            tooltip[i].style.top = e.pageY + 'px';
-        }
-    }
+    window.onmousemove = function (e) {
+        var x = e.clientX,
+            y = e.clientY;
+        tooltip.style.top = (y - 40) + 'px';
+        tooltip.style.left = (x + 20) + 'px';
+    };
 }
 
 function HideTooltip(id) {
-    var tooltip = document.querySelectorAll('.tooltip');
     document.getElementById(id).style.visibility = "hidden";
-    document.addEventListener('mousemove', fn, false);
-
-    function fn(e) {
-        for (var i=tooltip.length; i--;) {
-            tooltip[i].style.left = e.pageX + 'px';
-            tooltip[i].style.top = e.pageY + 'px';
-        }
-    }
 }
