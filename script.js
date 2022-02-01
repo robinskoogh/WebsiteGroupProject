@@ -29,7 +29,7 @@ function MenuPress() {
 function Send() {
     var tel = document.getElementById("phoneNumber").value;
     let pattern = /[0-9]+/;
-    if (!tel.match(pattern)) {
+    if (tel != "" && !tel.match(pattern)) {
         ShowPopup("Could not send message.");
         console.log("Error");
     }
@@ -37,21 +37,21 @@ function Send() {
         var formData = JSON.stringify($("#formContact").serializeArray());
         console.log(formData);
         ShowPopup("Message sent!");
-        alert("ligger du kvar?");
+        var delay = 2000;
+        setTimeout(function() {
+        location.reload();
+        }, delay);
     }
 }
 
 function ShowMsgBox(text) {
     var box = document.getElementById("msgBox");
-    //var btn = document.getElementById("msgBoxButton");
     var closeBtn = document.getElementsByClassName("closeBox")[0];
 
     document.getElementById("boxMessage").innerHTML = text;
 
-    // When the user clicks on the button, open the modal
-    // btn.onclick = function() {
+    // Visa box.
     box.style.display = "block";
-    //}
 
     // Stäng boxen på kryss.
     closeBtn.onclick = function() {
@@ -91,7 +91,7 @@ function DownloadFile(data, filename, type) {
     var file = new Blob([data], {type: type});
 
     if (window.navigator.msSaveOrOpenBlob) {
-        window.navigator.msSaveOrOpenBlob(file, filename); // For IE10+ (and Safari?)
+        window.navigator.msSaveOrOpenBlob(file, filename); // For IE10+ / Safari and some browsers.
     }
     else { // Other browsers.
         var a = document.createElement("a"),
@@ -100,13 +100,9 @@ function DownloadFile(data, filename, type) {
         a.download = filename;
         document.body.appendChild(a);
         a.click();
-        // setTimeout(function() {
-        //         document.body.removeChild(a);
-        //         window.URL.revokeObjectURL(url);  
-        //     }, 0); 
-        }
-    console.log("JSON file has been saved.");
     }
+    console.log("JSON file has been saved.");
+}
 
 // Slideshow 
 

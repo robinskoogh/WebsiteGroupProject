@@ -76,7 +76,7 @@
                 <br>
                 <div class = "popup">
                     <span class="popuptext" id="popup"><p id="popText">Message Sent!</p></span>
-                    <input type="submit" value="Send" id="submitButton" disabled>
+                    <input type="submit" value="Send" id="submitButton" onclick="Send()" disabled>
                     <!-- input type="button" gör så att valideringsinstruktioner ej körs -->
                 </div>
 
@@ -85,7 +85,7 @@
                 </div>
             </form>
         </div>
-        <div id="msgBox" class="modal">
+        <div class="modal" id="msgBox">
             <div class="modal-content">
             <span class="closeBox">&times;</span>
             <p id="boxMessage">Error!</p>
