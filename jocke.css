@@ -1,9 +1,9 @@
-@keyframes imgAnimation {
+@keyframes opacityAnim {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
-@-webkit-keyframes imgAnimation {
+@-webkit-keyframes opacityAnim {
     from {opacity: 0;}
     to {opacity: 1;}
 }
@@ -28,6 +28,16 @@
     to {width: 1;}
 }
 
+@keyframes barHeight {
+    from {height: 200%;}
+    to {height: 1;}
+}
+
+@-webkit-keyframes barHeight {
+    from {height: 200%;}
+    to {height: 1;}
+}
+
 @keyframes barHover {
     from {border: 0;}
     to {border: 1;}
@@ -36,6 +46,16 @@
 @-webkit-keyframes barHover {
     from {border: 0;}
     to {border: 2px solid #ddd;}
+}
+
+@keyframes visibilityAnim {
+    from {visibility: hidden;}
+    to {visibility: visible;}
+}
+
+@-webkit-keyframes visibilityAnim {
+    from {visibility: hidden;}
+    to {visibility: visible;}
 }
 
 
@@ -51,7 +71,7 @@
     border-radius: 100%;
     box-shadow: -0px 0px 0px -50px #fff inset, 0px 0px 50px;
     margin: 5%;
-    animation-name: imgAnimation;
+    animation-name: opacityAnim;
     animation-duration: 1s;
 }
 
@@ -59,7 +79,7 @@ h6 {
     position: relative;
     font-size: xx-large;
     width: 100%;
-    animation-name: imgAnimation;
+    animation-name: opacityAnim;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 1s;
@@ -68,7 +88,7 @@ h6 {
 
 p {
     position: relative;
-    animation-name: imgAnimation;
+    animation-name: opacityAnim;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-delay: 3s;
@@ -163,7 +183,7 @@ p {
         #fff 10%
     );
     border-right: 1px solid #ddd;
-    animation-name: imgAnimation, barWidth;
+    animation-name: opacityAnim, barWidth;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 5.5s;
@@ -177,7 +197,7 @@ p {
     height: 75%;
     padding: 12px;
     text-align: right;
-    animation-name: imgAnimation, barWidth, barSize;
+    animation-name: opacityAnim, barWidth, barHeight, barSize;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 6.5s;
@@ -191,7 +211,7 @@ p {
     height: 75%;
     padding: 12px;
     text-align: right;
-    animation-name: imgAnimation, barWidth, barSize;
+    animation-name: opacityAnim, barWidth, barHeight, barSize;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 7s;
@@ -205,7 +225,7 @@ p {
     height: 75%;
     padding: 12px;
     text-align: right;
-    animation-name: imgAnimation, barWidth, barSize;
+    animation-name: opacityAnim, barWidth, barHeight, barSize;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 7.5s;
@@ -234,4 +254,28 @@ p {
     animation-timing-function: ease-in-out; */
     background-color: rgb(252, 252, 125); 
     border: 2px solid #ddd;
+}
+
+.text1 {
+    animation-name: opacityAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 6.5s;
+    animation-fill-mode: both;
+}
+
+.text2 {
+    animation-name: opacityAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 7s;
+    animation-fill-mode: both;
+}
+
+.text3 {
+    animation-name: opacityAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 7.5s;
+    animation-fill-mode: both;
 }
