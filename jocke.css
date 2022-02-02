@@ -38,11 +38,6 @@
     to {visibility: visible;}
 }
 
-
-.jContainer {
-    
-}
-
 .jImage {
     position: relative;
     object-fit: fill;
@@ -55,7 +50,7 @@
     animation-duration: 1s;
 }
 
-h6 {
+.jContainer h6 {
     position: relative;
     font-size: xx-large;
     width: 100%;
@@ -66,7 +61,7 @@ h6 {
     animation-fill-mode: both;
 }
 
-p {
+.jContainer p {
     position: relative;
     animation-name: opacityAnim;
     animation-duration: 2s;

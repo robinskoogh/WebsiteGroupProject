@@ -243,11 +243,31 @@ function ShowTooltip(id) {
     window.onmousemove = function (e) {
         var x = e.clientX,
             y = e.clientY;
-        tooltip.style.top = (y - 40) + 'px';
         tooltip.style.left = (x + 20) + 'px';
+        tooltip.style.top = (y - 40) + 'px';
     };
 }
 
 function HideTooltip(id) {
     document.getElementById(id).style.visibility = "hidden";
+}
+
+function ChangeIcon() {
+    // Dark-Mode
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const dmIcon = document.getElementById("darkmodeIcon");
+    
+        if (prefersDarkScheme.matches) {
+            document.body.classList.toggle("light-theme");
+        }
+        else {
+            document.body.classList.toggle("dark-theme");
+        }
+    
+        if (document.body.className == "light-theme") {
+            dmIcon.src = "/images/dark.png";
+        }
+        else {
+            dmIcon.src = "/images/light.png";
+        }
 }
