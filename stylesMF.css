@@ -313,6 +313,40 @@
 .btn-toggle:hover {
     cursor: pointer;
 }
+.pContent {
+    margin: 25px 0;
+    width: 65%;
+}
+
+.pContent img {
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px lightslategrey;
+}
+
+.pTitle {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.pText {
+    font-size: 14px;
+    font-style: italic;
+}
+
+#tJocke,
+#tRobin {
+    border-radius: 50%;
+    width: 75%;
+    transition: 0.4s;
+}
+
+#tJocke:hover,
+#tRobin:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
 
 @media (min-width: 768px) {
     .mainBody .contentContainer, .aContainer {
@@ -476,6 +510,24 @@
 
     .aContainer p {
         font-size: 26px;
+    }
+
+    .pContent {
+        margin: 25px 0;
+        width:  405px;
+    }
+    
+    .pContent img {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .pTitle {
+        font-size: 20px;
+    }
+    
+    .pText {
+        font-size: 16px;
     }
 
     #navBarList {
