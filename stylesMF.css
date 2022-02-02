@@ -316,8 +316,14 @@
 
 .pText {
     font-size: 14px;
+    font-style: italic;
 }
 
+#tJocke,
+#tRobin {
+    border-radius: 50%;
+    width: 75%;
+}
 
 @media (min-width: 768px) {
     .mainBody .contentContainer, .aContainer {
