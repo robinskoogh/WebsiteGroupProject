@@ -254,20 +254,24 @@ function HideTooltip(id) {
 
 function ChangeIcon() {
     // Dark-Mode
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const prefersScheme = window.matchMedia("(prefers-color-scheme: light)");
     const dmIcon = document.getElementById("darkmodeIcon");
     
-        if (prefersDarkScheme.matches) {
-            document.body.classList.toggle("light-theme");
-        }
-        else {
-            document.body.classList.toggle("dark-theme");
-        }
+    if (prefersScheme.matches) {
+        document.body.classList.toggle("light-theme");
+        document.getElementById("mainHeader").classList.toggle("light-theme");
+        document.getElementById("mainFooter").classList.toggle("light-theme");
+    }
+    else {
+        document.body.classList.toggle("dark-theme");
+        document.getElementById("mainHeader").classList.toggle("dark-theme");
+        document.getElementById("mainFooter").classList.toggle("dark-theme");
+    }
     
-        if (document.body.className == "light-theme") {
-            dmIcon.src = "/images/dark.png";
-        }
-        else {
-            dmIcon.src = "/images/light.png";
-        }
+    if (document.body.className == "dark-theme") {
+        dmIcon.src = "/images/light.png";
+    }
+    else {
+        dmIcon.src = "/images/dark.png";
+    }
 }

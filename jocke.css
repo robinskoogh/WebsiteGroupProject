@@ -229,14 +229,3 @@
 #text3 {
     animation-delay: 7.5s;
 }
-
-.tooltip {
-    display: block;
-    position: fixed;
-    visibility: hidden;
-    background: #ddd;
-    z-index: 1;
-    padding: 10px;
-    border-radius: 10px 10px;
-    text-align: center;
-}

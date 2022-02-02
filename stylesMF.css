@@ -209,6 +209,7 @@
 
 .container .navbar .icon {
     display: flex;
+    cursor: pointer;
 }
 
 .menuItem:hover {
@@ -243,8 +244,9 @@
     color: #555555;
 }
 
-.menuItem {
+.menuItem{
     transition: 300ms;
+    color: #fff;
 }
 
 .container .navbar ul .close {
@@ -533,40 +535,139 @@
     #navBarList {
         top: auto;
         min-width: auto;
-    }   
+    }
 }
 
+.tooltip {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    background: #ddd;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 10px 10px;
+    text-align: center;
+}
 
 body {
     --text-color: #222;
-    --bkg-color: #f5f5f5;
-  }
-  body.dark-theme {
-    --text-color: #eee;
-    --bkg-color: #121212;
-  }
+    --bkg-color: #fff; 
+}
 
-  @media (prefers-color-scheme: dark) {
-    /* defaults to dark theme */
+body.dark-theme {
+    --text-color: #eee;
+    --bkg-color: #303030;
+}
+
+#mainHeader,
+#mainFooter {
+    --bkg-color: #f5f5f5;
+}
+
+#mainHeader.dark-theme,
+#mainFooter.dark-theme {
+    --bkg-color: #333;
+}
+
+input {
+    --bkg-color: default;
+}
+
+input.dark-theme {
+    --bkg-color: #333;
+}
+
+.percentage {
+    --bkg-color: repeating-linear-gradient(
+        to right,
+        #ddd,
+        #ddd 1px,
+        #fff 1px,
+        #fff 10%
+    );
+}
+
+.percentage.dark-theme {
+    --bkg-color: repeating-linear-gradient(
+        to right,
+        #ddd,
+        #ddd 1px,
+        #121212 1px,
+        #121212 10%
+    );
+}
+
+span {
+    --bkg-color: transparent;
+}
+span.dark-theme {
+    --bkg-color: transparent;
+}
+
+@media (prefers-color-scheme: light) {
+    /* defaults to light theme */
     body {
-        --text-color: #eee;
-        --bkg-color: #121212;
-    }
-    body.light-theme {
+        --bkg-color: #fff;
         --text-color: #222;
+    }
+
+    body.dark-theme {
+        --bkg-color: #121212;
+        --text-color: #eee;
+    }
+
+    #mainHeader,
+    #mainFooter {
         --bkg-color: #f5f5f5;
     }
-  }
-  
-  * {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  body, #mainHeader, #mainFooter, #navbar, #navbarList, #menuItem, .workWithUs a, ul, li {
+    
+    #mainHeader.dark-theme,
+    #mainFooter.dark-theme {
+        --bkg-color: #3a3a3a;
+    }
+
+    input {
+        --bkg-color: default;
+    }
+
+    input.dark-theme {
+        --bkg-color: #333;
+    }
+
+    .percentage {
+        --bkg-color: repeating-linear-gradient(
+            to right,
+            #ddd,
+            #ddd 1px,
+            #fff 1px,
+            #fff 10%
+        );
+    }
+
+    .percentage.dark-theme {
+        --bkg-color: repeating-linear-gradient(
+            to right,
+            #ddd,
+            #ddd 1px,
+            #121212 1px,
+            #121212 10%
+        );
+    }
+
+    span {
+        --bkg-color: transparent;
+    }
+
+    span.dark-theme {
+        --bkg-color: transparent;
+    }
+}
+
+body, span, .diagram, .percentage, .diagramText, #mainHeader, #mainFooter, input, .workWithUs a, textarea, .container .navbar .menuItem a {
     background: var(--bkg-color);
     background-color: var(--bkg-color);
-  }
-  
-  h1, h2, h3, h4, h5, h6, p, .workWithUs a, ul, li {
+}
+
+h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .container .navbar .menuItem a {
     color: var(--text-color);
-  }
+}
