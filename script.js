@@ -4,24 +4,24 @@
 let navMenuList = document.getElementById("navBarList");
 
 function Show() {
-    if (navMenuList.classList.contains("_Menus-show") ?? false){
-        navMenuList.classList.remove("_Menus-show");
+    if (navMenuList.classList.contains("showMenu") ?? false){
+        navMenuList.classList.remove("showMenu");
     }
     else {
-        navMenuList.classList.add("_Menus-show");
+        navMenuList.classList.add("showMenu");
     }
 }
 
 function Hide(){
-    navMenuList.classList.remove("_Menus-show");
+    navMenuList.classList.remove("showMenu");
 }
 
 function MenuPress() {
-    if (navMenuList.classList.contains("_Menus-show") ?? false){
-        navMenuList.classList.remove("_Menus-show");
+    if (navMenuList.classList.contains("showMenu") ?? false){
+        navMenuList.classList.remove("showMenu");
     }
     else {
-        navMenuList.classList.add("_Menus-show");
+        navMenuList.classList.add("showMenu");
     }
 
 }

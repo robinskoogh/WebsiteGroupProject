@@ -244,7 +244,7 @@
     color: #555555;
 }
 
-.menuItem{
+.menuItem {
     transition: 300ms;
     color: #fff;
 }
@@ -268,7 +268,7 @@
     width: 32px;
 }
 
-.container .navbar ._Menus-show {
+.container .navbar .showMenu {
     left: 0;
 }
 
