@@ -1,4 +1,4 @@
-body {
+/* body {
     --text-color: #222;
     --bkg-color: #fff; 
 }
@@ -62,11 +62,592 @@ span.dark-theme {
     --text-color: #eee;
 }
 
-body, span, .diagram, .percentage, .diagramText, #mainHeader, #mainFooter, input, .workWithUs a, textarea, .container .navbar .menuItem a {
+#hb {
+    filter: none;
+    
+}
+
+#hb.dark-theme {
+    filter: invert(1);
+}
+
+.modal {
+    --bkg-color: rgba(0,0,0,0.4);
+    --text-color: #222;
+}
+
+.modal.dark-theme {
+    --bkg-color: rgb(70, 70, 70);
+    --text-color: #eee;
+}
+
+.modal-content {
+    --bkg-color: #fefefe;
+    --text-color: #222;
+}
+
+.modal-content.dark-theme {
+    --bkg-color: rgb(70, 70, 70);
+    --text-color: #eee;
+}
+
+body, span, .diagram, .percentage, .diagramText, #mainHeader, #mainFooter, input, .workWithUs a, textarea, .container .navbar .menuItem a, li, .modal, .modal-content {
     background: var(--bkg-color);
     background-color: var(--bkg-color);
 }
 
-h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .container .navbar .menuItem a {
+h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .container .navbar .menuItem a, .modal, .modal-content {
     color: var(--text-color);
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+	vertical-align: baseline;
+    background-color: #333;
+}
+
+.mainBody {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1370px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 100px;
+    gap: 20px;
+}
+
+.mainBody .contentContainer {
+    flex: auto;
+    margin: 10px 0;
+}
+
+.contentContainer {
+    background-color: #333;
+    border-radius: 10px;
+    max-width: 75%;
+}
+
+.contentItem {
+    padding: 10px;
+}
+
+#mainHeader {
+    background-color: #333;
+    height: 80px;
+    box-shadow: 0 -35px 50px black;
+}
+
+#mainFooter {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 35px 50px black;
+    max-width: none;
+    width: 100%;
+    z-index: 999;
+}
+
+.introduction {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+    row-gap: 50px;
+}
+
+.introImg img {
+    width: 50%;
+}
+
+.introText {
+    font-size: 18px;
+}
+
+.introText p {
+    margin: 15px 0;
+}
+
+#tagLine {
+    font-size: 30px;
+    font-style: italic;
+    color: lightseagreen;
+}
+
+#description {
+    font-size: 16px;
+}
+
+.workWithUs {
+    margin: 30px 0;
+    line-height: 100%;
+}
+
+.workWithUs a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 4px;
+    background-color: #333;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.workWithUs a:hover {
+    background-color: #7070702c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.slideshow {
+    position: relative;
+    max-height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+#slideshowPic {
+    width: 100%;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#slideshowPic.fade {
+    opacity: 0;
+}
+
+#playPause {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#playPause:hover {
+    background-color: rgba(49, 49, 49, 0.3)
+}
+
+#playPause.paused {
+    background-color: rgba(20, 20, 20, 0.8);
+}
+
+.prevImg, .nextImg {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    line-height: 1em;
+}
+
+.nextImg {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.prevImg {
+    left: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.prevImg:hover, .nextImg:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dropdownContent {
+    display: none;
+}
+
+.container {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container .logo {
+    max-width: 200px;
+    flex: 1;
+}
+
+.container .logo a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 80px;
+}
+
+.container .logo a img {
+    max-width: 100%;
+    max-height: 80px;
+}
+
+.container .navbar {
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.container .navbar .icon {
+    display: flex;
+    cursor: pointer;
+}
+
+.menuItem:hover {
+    color: #707070;
+    background-color: #333;
+}
+
+.container .navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-wrap: nowrap;
+    position: fixed;
+    left: 100%;
+    flex-direction: column;
+    background: #333;
+    height: 100%;
+    overflow: auto;
+    transition: left .3s;
+    z-index: 999;
+}
+
+.container .navbar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    cursor: pointer;
+    padding: 10px 40px;
+    line-height: normal;
+    color: #555555;
+}
+
+.menuItem {
+    transition: 300ms;
+    color: #333;
+}
+
+.container .navbar ul .close {
+    display: block;
+    text-align: right;
+    padding: 10px;
+}
+
+.container .navbar ul .close span {
+    font-size: 40px;
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.container .navbar img {
+    height: 32px;
+    width: 32px;
+}
+
+.container .navbar .showMenu {
+    left: 0;
+}
+
+#navBarList {
+    top: 80px;
+}
+
+.aContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 10px;
+    flex-basis: 50%;
+    justify-content: center;
+}
+
+.aContainer p {
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    color:rgb(209, 118, 0);
+}
+
+.aContainer a {
+    text-decoration: none;
+    color: black;
+}
+
+.aItem {
+    flex-basis: 100%;
+}
+
+.btn-toggle {
+    position: absolute;
+    align-self: center;
+    margin-right: 85%;
+}
+
+#darkmodeIcon {
+    width: 35px;
+    height: auto;
+}
+
+.btn-toggle:hover {
+    cursor: pointer;
+}
+.pContent {
+    margin: 25px 0;
+    width: 65%;
+}
+
+.pContent img {
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px lightslategrey;
+}
+
+.pTitle {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.pText {
+    font-size: 14px;
+    font-style: italic;
+}
+
+#tJocke,
+#tRobin {
+    border-radius: 50%;
+    width: 75%;
+    transition: 0.4s;
+}
+
+#tJocke:hover,
+#tRobin:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+
+@media (min-width: 768px) {
+    .mainBody .contentContainer, .aContainer {
+        flex: 1;
+        margin: 10px 0;
+        max-width: 550px;
+    }
+
+    .mainBody {
+        gap: 30px;
+        column-gap: 100px;
+    }
+
+    .container .logo {
+        max-width: 232px;
+        flex: auto;
+    }
+
+    .slideshow {
+        flex-basis: 100%;
+    }
+
+    .container .navbar ul li a {
+        text-decoration: none;
+        color: #eee;
+        font-size: 20px;
+        display: block;
+        line-height: 80px;
+        cursor: pointer;
+        padding: 0 10px;
+    }
+
+    #collab {
+        background: url("/images/collab.jpg");
+        background-size: cover;
+    }
+
+    #weBest {
+        background: url("/images/weBest.jpg");
+        background-size: cover;
+    }
+
+    .contentContainer {
+        display: flex;
+        min-height: 200px;
+    }
+
+    .contentItem {
+        align-self: flex-end;
+        background-color: #eee;
+        border-radius: 10px;
+    }
+
+    .container .navbar ul li div a {
+        font-size: 16px;
+        line-height: normal;
+        color: black;
+        padding: 12px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        transition: 300ms;
+        background-color: #333;
+    }
+
+    .container .navbar ul li div a:hover {
+        background-color: #333;
+    }
+
+    .container .navbar ul .close {
+        display: none;
+    }
+    
+    #playPause {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        cursor: pointer;
+    }
+    
+    .prevImg, .nextImg {
+        top: 40%;
+        font-size: 40px;
+        padding: 15px;
+    }
+
+    #tagLine {
+        font-size: 38px;
+        font-style: italic;
+        color: lightseagreen;
+    }
+
+    #description {
+        font-size: 18px;
+    }
+    
+    .workWithUs {
+        margin: 30px 0;
+    }
+    
+    .workWithUs a {
+        font-size: 24px;
+        padding: 10px 25px;
+        border-radius: 4px;
+        background-color: #333;
+        transition: 0.3s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .dropdownContent {
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        transition: ease 300ms;
+        opacity: 0;
+    }
+    
+    .dropdownContent a {
+        float: none;
+        color: #eee;
+        padding: 12px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        transition: 300ms;
+        background-color: #333;
+    }
+    
+    .dropdownContent a:hover {
+        background-color: #333;
+    }
+
+    .menuItem:hover .dropdownContent {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .container .navbar .icon {
+        display: none;
+    }
+
+    .container .navbar ul {
+        background-color: #333;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        position: inherit;
+        left: auto;
+        flex-direction: row;
+        height: auto;
+        transition: none;
+    }
+
+    .aContainer p {
+        font-size: 26px;
+    }
+
+    .pContent {
+        margin: 25px 0;
+        width:  405px;
+    }
+    
+    .pContent img {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .pTitle {
+        font-size: 20px;
+    }
+    
+    .pText {
+        font-size: 16px;
+    }
+
+    #navBarList {
+        top: auto;
+        min-width: auto;
+    }
+}
+
+.tooltip {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    background: #333;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 10px 10px;
+    text-align: center;
 }
