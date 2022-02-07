@@ -516,7 +516,8 @@
 
     .pContent {
         margin: 25px 0;
-        width:  405px;
+        flex-basis: 41%;
+        max-width: 410px;
     }
     
     .pContent img {

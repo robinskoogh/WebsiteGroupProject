@@ -24,7 +24,7 @@
     --color:darkred;
     --width:120px;
 
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     width: var(--width);
     position: relative;
     display: inline-grid;
@@ -91,7 +91,7 @@
 #barChart {
     display: block;
     min-height: 200px;
-    min-width: 450px;
+    min-width: 400px;
     margin: auto;
 }
 
@@ -261,7 +261,7 @@ input:checked + .slider:before {
         --color:darkred;
         --width:150px;
     
-        aspect-ratio: 1;
+        aspect-ratio: 1 / 1;
         position: relative;
         display: inline-grid;
         place-content: center;
