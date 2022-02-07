@@ -252,26 +252,36 @@ function HideTooltip(id) {
     document.getElementById(id).style.visibility = "hidden";
 }
 
-function ChangeIcon() {
-    // Dark-Mode
-    const prefersScheme = window.matchMedia("(prefers-color-scheme: light)");
+function ToggleDarkMode() {
     const dmIcon = document.getElementById("darkmodeIcon");
-    
-    if (prefersScheme.matches) {
-        document.body.classList.toggle("light-theme");
-        document.getElementById("mainHeader").classList.toggle("light-theme");
-        document.getElementById("mainFooter").classList.toggle("light-theme");
+
+    if (document.body.className == "") {
+        document.body.classList.toggle("dark-theme");
+        document.getElementById("mainHeader").classList.toggle("dark-theme");
+        document.getElementById("mainFooter").classList.toggle("dark-theme");
+        dmIcon.src = "/images/light.png";
     }
     else {
         document.body.classList.toggle("dark-theme");
         document.getElementById("mainHeader").classList.toggle("dark-theme");
         document.getElementById("mainFooter").classList.toggle("dark-theme");
-    }
-    
-    if (document.body.className == "dark-theme") {
-        dmIcon.src = "/images/light.png";
-    }
-    else {
         dmIcon.src = "/images/dark.png";
     }
 }
+
+// const dmIcon = document.getElementById("darkmodeIcon");
+
+// dmIcon.addEventListener("click", function() {
+// if (document.body.className == "") {
+//     document.body.classList.toggle("dark-theme");
+//     document.getElementById("mainHeader").classList.toggle("dark-theme");
+//     document.getElementById("mainFooter").classList.toggle("dark-theme");
+//     dmIcon.src = "/images/light.png";
+// }
+// else {
+//     document.body.classList.toggle("dark-theme");
+//     document.getElementById("mainHeader").classList.toggle("dark-theme");
+//     document.getElementById("mainFooter").classList.toggle("dark-theme");
+//     dmIcon.src = "/images/dark.png";
+// }
+// })
