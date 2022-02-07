@@ -254,34 +254,27 @@ function HideTooltip(id) {
 
 function ToggleDarkMode() {
     const dmIcon = document.getElementById("darkmodeIcon");
+    var theme = document.getElementsByTagName('link')[0];
 
-    if (document.body.className == "") {
-        document.body.classList.toggle("dark-theme");
-        document.getElementById("mainHeader").classList.toggle("dark-theme");
-        document.getElementById("mainFooter").classList.toggle("dark-theme");
+    if (theme.getAttribute('href') == 'stylesMF.css') {
+        theme.setAttribute('href', 'darkmode.css');
         dmIcon.src = "/images/light.png";
-    }
+    } 
     else {
-        document.body.classList.toggle("dark-theme");
-        document.getElementById("mainHeader").classList.toggle("dark-theme");
-        document.getElementById("mainFooter").classList.toggle("dark-theme");
+        theme.setAttribute('href', 'stylesMF.css');
         dmIcon.src = "/images/dark.png";
     }
+
+    // if (document.body.className == "") {
+    //     document.body.classList.toggle("dark-theme");
+    //     document.getElementById("mainHeader").classList.toggle("dark-theme");
+    //     document.getElementById("mainFooter").classList.toggle("dark-theme");
+    //     dmIcon.src = "/images/light.png";
+    // }
+    // else {
+    //     document.body.classList.toggle("dark-theme");
+    //     document.getElementById("mainHeader").classList.toggle("dark-theme");
+    //     document.getElementById("mainFooter").classList.toggle("dark-theme");
+    //     dmIcon.src = "/images/dark.png";
+    // }
 }
-
-// const dmIcon = document.getElementById("darkmodeIcon");
-
-// dmIcon.addEventListener("click", function() {
-// if (document.body.className == "") {
-//     document.body.classList.toggle("dark-theme");
-//     document.getElementById("mainHeader").classList.toggle("dark-theme");
-//     document.getElementById("mainFooter").classList.toggle("dark-theme");
-//     dmIcon.src = "/images/light.png";
-// }
-// else {
-//     document.body.classList.toggle("dark-theme");
-//     document.getElementById("mainHeader").classList.toggle("dark-theme");
-//     document.getElementById("mainFooter").classList.toggle("dark-theme");
-//     dmIcon.src = "/images/dark.png";
-// }
-// })
