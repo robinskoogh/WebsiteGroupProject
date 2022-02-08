@@ -387,12 +387,12 @@
     }
 
     #collab {
-        background: url("/images/collab.jpg");
+        background: url("./images/collab.jpg");
         background-size: cover;
     }
 
     #weBest {
-        background: url("/images/weBest.jpg");
+        background: url("./images/weBest.jpg");
         background-size: cover;
     }
 

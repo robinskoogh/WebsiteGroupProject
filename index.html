@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesMF.css">
+    <link rel="stylesheet" href="./stylesMF.css">
     <!-- <link rel="stylesheet" href="darkmode.css"> -->
     <title>jDev_r</title>
 </head>
@@ -14,12 +14,12 @@
         <div class="container">
             <div class="logo">
                     <a href="index.html">
-                        <img src="/images/jDev_r.png" alt="company logo" id="logo">
+                        <img src="./images/jDev_r.png" alt="company logo" id="logo">
                     </a>
             </div>
             <div class="navbar">
                 <div class="icon" onclick="Show()">
-                    <img src="/images/hamburgerMenu.png" alt="hamburger menu icon">
+                    <img src="./images/hamburgerMenu.png" alt="hamburger menu icon">
                 </div>
 
 
@@ -28,15 +28,15 @@
                         <li class="close">
                             <span onclick="Hide()">×</span>
                         </li>
-                        <li class="menuItem"><a href="index.html">Home</a></li>
+                        <li class="menuItem"><a href="./index.html">Home</a></li>
                         <li class="menuItem">
-                                <a href="about.html">About</a>
+                                <a href="./about.html">About</a>
                                 <div class="dropdownContent">
-                                    <a href="portfolio.html">Portfolio</a>
-                                    <a href="team.html">The Team</a>
+                                    <a href="./portfolio.html">Portfolio</a>
+                                    <a href="./team.html">The Team</a>
                                 </div>
                         </li>
-                        <li class="menuItem"><a href="/contact.html">Contact</a></li>
+                        <li class="menuItem"><a href="./contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,23 +47,23 @@
     <!-- Body -->
     <div class="mainBody">
         <div class="introduction">
-            <div class="introImg"><img src="/images/thisIsUs.png" alt="employees"></div>
+            <div class="introImg"><img src="./images/thisIsUs.png" alt="employees"></div>
             <div class="introText">
                 <p id="tagLine">Hello it's us - We will get the job done!</p>
                 <br>
                 <p id="description">We are experts in the field of .NET and Full Stack Developers of the highest order. We can help you with everything from a small website to corporate back end systems.</p>
             </div>
             <div class="workWithUs">
-                <a href="/contact.html">Work with us</a>
+                <a href="./contact.html">Work with us</a>
             </div>
         </div>
         <div class="slideshow">
             <div class="slides">
                 <div class="slideshowFrame">
-                    <img id="slideshowPic" src="/images/slideshow/img1.jpg" alt="slideshow">
+                    <img id="slideshowPic" src="./images/slideshow/img1.jpg" alt="slideshow">
                     <a class="prevImg" onclick="prevImg()">&#10094;</a>
                     <a class="nextImg" onclick="nextImg()">&#10095;</a>
-                    <a class="pauseSlides"><img id="playPause" onclick="playPause()" src="/images/play_pause.png" alt="play/pause button"></a>
+                    <a class="pauseSlides"><img id="playPause" onclick="playPause()" src="./images/play_pause.png" alt="play/pause button"></a>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
         <div class="contentContainer" id="weBest">
             <div class="contentItem home">Another paragraph with an enticing description of how awesome our company is. You would do well to hire us! Imagine if you didn't hire us and missed out on the opportunity of a lifetime. This is your chance. Don't add another entry to your already long list of life-long regrets. What are you waiting for? Check out these other awesome things we have worked on.</div>
         </div>
-        <div class="workWithUs" style="flex-basis: 100%;"><a href="/portfolio.html">Portfolio</a></div>
+        <div class="workWithUs" style="flex-basis: 100%;"><a href="./portfolio.html">Portfolio</a></div>
     </div>
 
     
@@ -81,12 +81,12 @@
     <footer id="mainFooter">
         <p>Copyright &copy; 2022 | Joakim & Robin</p>
         <div class="btn-toggle">
-            <img src="/images/dark.png" alt="Toggle Dark-Mode" id="darkmodeIcon" onmouseover="ShowTooltip('ttDarkMode')" onmouseleave="HideTooltip('ttDarkMode')" onclick="ToggleDarkMode()">
+            <img src="./images/dark.png" alt="Toggle Dark-Mode" id="darkmodeIcon" onmouseover="ShowTooltip('ttDarkMode')" onmouseleave="HideTooltip('ttDarkMode')" onclick="ToggleDarkMode()">
             <div class="tooltip" id="ttDarkMode">Toggle Dark-Mode</div>
         </div>
     </footer>
 
 
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
