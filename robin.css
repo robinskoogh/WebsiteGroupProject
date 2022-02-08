@@ -106,7 +106,7 @@
 
 #barChart tbody td {
     animation: animate-bars 5s .5s both;
-    animation-duration: 10s;
+    animation-duration: 2.5s;
     opacity: 85%;
 }
 
@@ -219,7 +219,7 @@ input:checked + .slider:before {
 
 @keyframes animate-bars {
     0% { transform: translateX(-101%); }
-    15% { transform: translateX(0);}
+    100% { transform: translateX(0);}
 }
 
 @keyframes p{

@@ -23,7 +23,6 @@ function MenuPress() {
     else {
         navMenuList.classList.add("showMenu");
     }
-
 }
 
 function Send() {
@@ -170,11 +169,7 @@ function stopSlideshow() {
     clearTimeout(timer)
 }
 
-function runSlideshow() {
-    slideshow();
-}
-
-window.onload = runSlideshow;
+window.onload = slideshow;
 
 
 // Email live validation

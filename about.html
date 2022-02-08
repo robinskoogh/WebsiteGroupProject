@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesMF.css">
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="./stylesMF.css">
+    <link rel="stylesheet" href="./contact.css">
+    <!-- <link rel="stylesheet" href="darkmode.css"> -->
     <title>About</title>
 </head>
 <body>
@@ -14,13 +14,13 @@
     <header id="mainHeader">
         <div class="container">
             <div class="logo">
-                    <a href="index.html">
-                        <img src="/images/jDev_r.png" alt="company logo" id="logo">
+                    <a href="./index.html">
+                        <img src="./images/jDev_r.png" alt="company logo" id="logo">
                     </a>
             </div>
             <div class="navbar">
                 <div class="icon" onclick="Show()">
-                    <img src="/images/hamburgerMenu.png" alt="hamburger menu icon">
+                    <img src="./images/hamburgerMenu.png" alt="hamburger menu icon">
                 </div>
 
                 <div class="navbarList">
@@ -28,15 +28,15 @@
                         <li class="close">
                             <span onclick="Hide()">×</span>
                         </li>
-                        <li class="menuItem"><a href="index.html">Home</a></li>
+                        <li class="menuItem"><a href="./index.html">Home</a></li>
                         <li class="menuItem">
-                            <a href="about.html">About</a>
+                            <a href="./about.html">About</a>
                             <div class="dropdownContent">
-                                <a href="portfolio.html">Portfolio</a>
-                                <a href="team.html">The Team</a>
+                                <a href="./portfolio.html">Portfolio</a>
+                                <a href="./team.html">The Team</a>
                             </div>
                         </li>
-                        <li class="menuItem"><a href="contact.html">Contact</a></li>
+                        <li class="menuItem"><a href="./contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -51,14 +51,14 @@
         </div>
         <div class="aContainer">
             <p>Meet the team</p>
-            <div class="aItem workWithUs">
-                <a href="/team.html">This is us</a>
+            <div class="aItem linkBtn">
+                <a href="./team.html">This is us</a>
             </div>
         </div>
         <div class="aContainer">
             <p>Check out our portfolio</p>
-            <div class="aItem workWithUs">
-                <a href="/portfolio.html">Portfolio</a>
+            <div class="aItem linkBtn">
+                <a href="./portfolio.html">Portfolio</a>
             </div>
         </div>
     </div>
@@ -68,11 +68,11 @@
     <footer id="mainFooter">
         <p>Copyright &copy; 2022 | Joakim & Robin</p>
         <div class="btn-toggle">
-            <img src="/images/dark.png" alt="Toggle Dark-Mode" id="darkmodeIcon" onmouseover="ShowTooltip('ttDarkMode')" onmouseleave="HideTooltip('ttDarkMode')" onclick="ToggleDarkMode()">
+            <img src="./images/dark.png" alt="Toggle Dark-Mode" id="darkmodeIcon" onmouseover="ShowTooltip('ttDarkMode')" onmouseleave="HideTooltip('ttDarkMode')" onclick="ToggleDarkMode()">
             <div class="tooltip" id="ttDarkMode">Toggle Dark-Mode</div>
         </div>
     </footer>
 
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
