@@ -80,9 +80,9 @@ function ShowPopup(text) {
     setTimeout(function() {
     popup.classList.toggle("hide");
     }, delay);
-  }
+}
 
-function SaveFile() {
+function GetFormData() {
     let formData = JSON.stringify($("#formContact").serializeArray());
     console.log(formData);
     DownloadFile(formData, "formdata.json", "text/plain;charset=utf-8");

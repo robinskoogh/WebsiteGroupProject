@@ -1,106 +1,3 @@
-/* body {
-    --text-color: #222;
-    --bkg-color: #fff;
-    background: #222;
-    background-color: #fff;
-}
-
-body.dark-theme {
-    --text-color: #eee;
-    --bkg-color: #303030;
-}
-
-#mainHeader,
-#mainFooter {
-    --bkg-color: #f5f5f5;
-}
-
-#mainHeader.dark-theme,
-#mainFooter.dark-theme {
-    --bkg-color: #333;
-}
-
-input {
-    --bkg-color: default;
-}
-
-input.dark-theme {
-    --bkg-color: #333;
-}
-
-.percentage {
-    --bkg-color: repeating-linear-gradient(
-        to right,
-        #ddd,
-        #ddd 1px,
-        #fff 1px,
-        #fff 10%
-    );
-}
-
-.percentage.dark-theme {
-    --bkg-color: repeating-linear-gradient(
-        to right,
-        #ddd,
-        #ddd 1px,
-        #121212 1px,
-        #121212 10%
-    );
-}
-
-span {
-    --bkg-color: transparent;
-}
-span.dark-theme {
-    --bkg-color: transparent;
-}
-
-.container .navbar .menuItem a:hover {
-    --bkg-color: #303030;
-    --text-color: #eee;
-}
-.container .navbar .menuItem a.dark-theme:hover {
-    --bkg-color: rgb(70, 70, 70);
-    --text-color: #eee;
-}
-
-#hb {
-    filter: none;
-    
-}
-
-#hb.dark-theme {
-    filter: invert(1);
-}
-
-.modal {
-    --bkg-color: rgba(0,0,0,0.4);
-    --text-color: #222;
-}
-
-.modal.dark-theme {
-    --bkg-color: rgb(70, 70, 70);
-    --text-color: #eee;
-}
-
-.modal-content {
-    --bkg-color: #fefefe;
-    --text-color: #222;
-}
-
-.modal-content.dark-theme {
-    --bkg-color: rgb(70, 70, 70);
-    --text-color: #eee;
-}
-
-body, span, .diagram, .percentage, .diagramText, #mainHeader, #mainFooter, input, .workWithUs a, textarea, .container .navbar .menuItem a, li, .modal, .modal-content {
-    background: var(--bkg-color);
-    background-color: var(--bkg-color);
-}
-
-h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .container .navbar .menuItem a, .modal, .modal-content {
-    color: var(--text-color);
-} */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 * {
@@ -122,9 +19,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     justify-content: center;
     text-align: center;
     margin-bottom: 100px;
-    gap: 20px;   
-    background-color: #303030;
-    color: #eee;
+    gap: 20px;
 }
 
 .mainBody .contentContainer {
@@ -133,6 +28,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
 }
 
 .contentContainer {
+    background-color: #f5f5f5;
     border-radius: 10px;
     max-width: 75%;
 }
@@ -142,7 +38,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
 }
 
 #mainHeader {
-    background-color: #303030;
+    background-color: #f5f5f5;
     height: 80px;
     box-shadow: 0 -35px 50px black;
 }
@@ -152,8 +48,8 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     justify-content: center;
     position: fixed;
     bottom: 0;
-    background-color: #303030;
-    color: #eee;
+    background-color: #f5f5f5;
+    color: black;
     text-align: center;
     padding: 20px;
     margin-top: 50px;
@@ -197,7 +93,6 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
 .workWithUs {
     margin: 30px 0;
     line-height: 100%;
-    background-color: #303030;
 }
 
 .workWithUs a {
@@ -206,15 +101,13 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     font-size: 20px;
     padding: 10px 25px;
     border-radius: 4px;
-    background-color: #404040;
-    color: #eee;
+    background-color: #f5f5f5;
     transition: 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .workWithUs a:hover {
-    background-color: #303030;
-    color: #eee;
+    background-color: #7070702c;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
@@ -320,8 +213,8 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
 }
 
 .menuItem:hover {
-    color: #eee;
-    background-color: #404040;
+    color: #707070;
+    background-color: rgb(228, 228, 228);
 }
 
 .container .navbar ul {
@@ -334,7 +227,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     position: fixed;
     left: 100%;
     flex-direction: column;
-    background: #333;
+    background: #ffffff;
     height: 100%;
     overflow: auto;
     transition: left .3s;
@@ -348,7 +241,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     cursor: pointer;
     padding: 10px 40px;
     line-height: normal;
-    color: #eee;
+    color: #555555;
 }
 
 .menuItem {
@@ -467,8 +360,6 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     .mainBody {
         gap: 30px;
         column-gap: 100px;
-        background-color: #303030;
-        color: #eee;
     }
 
     .container .logo {
@@ -482,7 +373,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
 
     .container .navbar ul li a {
         text-decoration: none;
-        color: #eee;
+        color: black;
         font-size: 20px;
         display: block;
         line-height: 80px;
@@ -503,7 +394,6 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     .contentContainer {
         display: flex;
         min-height: 200px;
-        color: black;
     }
 
     .contentItem {
@@ -521,13 +411,11 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
         display: block;
         text-align: left;
         transition: 300ms;
-        background-color: #303030;
-        color: #eee;
+        background-color: #f5f5f5;
     }
 
     .container .navbar ul li div a:hover {
-        background-color: #101010;
-        color: #eee;
+        background-color: rgb(228, 228, 228);
     }
 
     .container .navbar ul .close {
@@ -567,8 +455,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
         font-size: 24px;
         padding: 10px 25px;
         border-radius: 4px;
-        background-color: #404040;
-        color: #eee;
+        background-color: #f5f5f5;
         transition: 0.3s;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     }
@@ -592,7 +479,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
         display: block;
         text-align: left;
         transition: 300ms;
-        background-color: #303030;
+        background-color: #f5f5f5;
     }
     
     .dropdownContent a:hover {
@@ -602,7 +489,6 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     .menuItem:hover .dropdownContent {
         visibility: visible;
         opacity: 1;
-        background-color: #404040;
     }
 
     .container .navbar .icon {
@@ -610,7 +496,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     }
 
     .container .navbar ul {
-        background-color: #303030;
+        background-color: #f5f5f5;
         display: flex;
         flex-wrap: wrap;
         list-style: none;
@@ -630,7 +516,8 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
 
     .pContent {
         margin: 25px 0;
-        width:  405px;
+        flex-basis: 41%;
+        max-width: 410px;
     }
     
     .pContent img {

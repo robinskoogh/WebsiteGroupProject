@@ -10,22 +10,22 @@
 
 @keyframes widthAnim {
     from {width: 0%;}
-    to {width: 100%;}
+    to {max-width: 100%;}
 }
 
 @-webkit-keyframes widthAnim {
-    from {width: 0;}
-    to {width: 1;}
+    from {width: 0%;}
+    to {max-width: 100%;}
 }
 
 @keyframes heightAnim {
-    from {height: 200%;}
+    from {height: 150%;}
     to {height: 75%;}
 }
 
 @-webkit-keyframes heightAnim {
-    from {height: 200%;}
-    to {height: 1;}
+    from {height: 150%;}
+    to {height: 75%;}
 }
 
 @keyframes visibilityAnim {
@@ -42,7 +42,6 @@
     position: relative;
     object-fit: fill;
     width: 25%;
-    height: 22.5%;
     border-radius: 100%;
     box-shadow: -0px 0px 0px -50px #fff inset, 0px 0px 50px;
     margin: 5%;
@@ -68,6 +67,7 @@
     animation-timing-function: ease-in-out;
     animation-delay: 3s;
     animation-fill-mode: both;
+    padding: 3%;
 }
 
 #h1 {
@@ -96,7 +96,7 @@
 
 #p4 {
     animation-timing-function: step-end;
-    animation-delay: 6.5s;
+    animation-delay: 5.5s;
 }
 
 .diagramContainer {
@@ -165,7 +165,7 @@
     animation-name: opacityAnim, widthAnim;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
-    animation-delay: 5.5s;
+    animation-delay: 4.5s;
     animation-fill-mode: both;
 }
 
@@ -187,20 +187,20 @@
 
 #bar-1 {
     background-color:lawngreen;
-    max-width: 90%;
-    animation-delay: 6.5s;
+    width: 90%;
+    animation-delay: 5.5s;
 }
 
 #bar-2 {
     background-color:rgb(255, 75, 0);
-    max-width: 25%;
-    animation-delay: 7s;
+    width: 25%;
+    animation-delay: 6s;
 }
 
 #bar-3 {
     background-color:yellow;
-    max-width: 45%;
-    animation-delay: 7.5s;
+    width: 45%;
+    animation-delay: 6.5s;
 }
 
 #bar-1:hover{
@@ -219,13 +219,13 @@
 }
 
 #text1 {    
-    animation-delay: 6.5s;
+    animation-delay: 5.5s;
 }
 
 #text2 {
-    animation-delay: 7s;
+    animation-delay: 6s;
 }
 
 #text3 {
-    animation-delay: 7.5s;
+    animation-delay: 6.5s;
 }

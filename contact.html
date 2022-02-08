@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesMF.css">
     <link rel="stylesheet" href="contact.css">
-    <!-- <link rel="stylesheet" href="darkmode.css"> -->
+    <link rel="stylesheet" href="darkmode.css">
     <title>Contact</title>
 </head>
 <body>
@@ -47,7 +47,6 @@
     <div class="mainBody">
         <div id="contactForm">
             Contact us using the form below
-            <!-- return false för att inte uppdatera sidan (förhindrar javascript från att köras) -->
             <form id="formContact" onsubmit="return false">
                 <div>
                     <label for="name">Name</label><br>
@@ -78,11 +77,10 @@
                 <div class = "popup">
                     <span class="popuptext" id="popup"><p id="popText">Message Sent!</p></span>
                     <input type="submit" value="Send" id="submitButton" onclick="Send()" disabled>
-                    <!-- input type="button" gör så att valideringsinstruktioner ej körs -->
                 </div>
 
                 <div class="saveFile">
-                    <input type="button" value="Download as JSON" id="saveFile" onclick="SaveFile()">
+                    <input type="button" value="Download as JSON" id="saveFile" onclick="GetFormData()">
                 </div>
             </form>
         </div>
