@@ -9,8 +9,8 @@
 }
 
 @keyframes widthAnim {
-    from {width: 0;}
-    to {width: 1;}
+    from {width: 0%;}
+    to {width: 100%;}
 }
 
 @-webkit-keyframes widthAnim {
@@ -20,7 +20,7 @@
 
 @keyframes heightAnim {
     from {height: 200%;}
-    to {height: 1;}
+    to {height: 75%;}
 }
 
 @-webkit-keyframes heightAnim {
@@ -42,7 +42,7 @@
     position: relative;
     object-fit: fill;
     width: 25%;
-    height: 22,5%;
+    height: 22.5%;
     border-radius: 100%;
     box-shadow: -0px 0px 0px -50px #fff inset, 0px 0px 50px;
     margin: 5%;
@@ -187,19 +187,19 @@
 
 #bar-1 {
     background-color:lawngreen;
-    width: 90%;
+    max-width: 90%;
     animation-delay: 6.5s;
 }
 
 #bar-2 {
     background-color:rgb(255, 75, 0);
-    width: 25%;
+    max-width: 25%;
     animation-delay: 7s;
 }
 
 #bar-3 {
     background-color:yellow;
-    width: 45%;
+    max-width: 45%;
     animation-delay: 7.5s;
 }
 
