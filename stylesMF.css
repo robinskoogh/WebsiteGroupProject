@@ -261,6 +261,11 @@
     border: 1px solid #cccccc;
     padding: 0 10px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.container .navbar ul .close span:hover {
+    background-color: #cccccc;
 }
 
 .container .navbar img {
