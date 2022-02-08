@@ -27,17 +27,18 @@ function MenuPress() {
 }
 
 function Send() {
-    var tel = document.getElementById("phoneNumber").value;
+    let tel = document.getElementById("phoneNumber").value;
     let pattern = /[0-9]+/;
     if (tel != "" && !tel.match(pattern)) {
         ShowPopup("Could not send message.");
         console.log("Error");
     }
     else {
-        var formData = JSON.stringify($("#formContact").serializeArray());
+        let formData = JSON.stringify($("#formContact").serializeArray());
         console.log(formData);
         ShowPopup("Message sent!");
-        var delay = 2000;
+
+        let delay = 2000;
         setTimeout(function() {
         location.reload();
         }, delay);
@@ -45,8 +46,8 @@ function Send() {
 }
 
 function ShowMsgBox(text) {
-    var box = document.getElementById("msgBox");
-    var closeBtn = document.getElementsByClassName("closeBox")[0];
+    let box = document.getElementById("msgBox");
+    let closeBtn = document.getElementsByClassName("closeBox")[0];
 
     document.getElementById("boxMessage").innerHTML = text;
 
@@ -69,33 +70,33 @@ function ShowMsgBox(text) {
 }
 
 function ShowPopup(text) {
-    var popup = document.getElementById("popup");
+    let popup = document.getElementById("popup");
 
     document.getElementById("popText").innerHTML = text;
 
     popup.classList.toggle("show");
 
-    var delay = 2000;
+    let delay = 2000;
     setTimeout(function() {
     popup.classList.toggle("hide");
     }, delay);
   }
 
 function SaveFile() {
-    var formData = JSON.stringify($("#formContact").serializeArray());
+    let formData = JSON.stringify($("#formContact").serializeArray());
     console.log(formData);
     DownloadFile(formData, "formdata.json", "text/plain;charset=utf-8");
     ShowMsgBox("JSON-data:<br/>" + formData);
 }
 
 function DownloadFile(data, filename, type) {
-    var file = new Blob([data], {type: type});
+    let file = new Blob([data], {type: type});
 
     if (window.navigator.msSaveOrOpenBlob) {
         window.navigator.msSaveOrOpenBlob(file, filename); // For IE10+ / Safari and some browsers.
     }
     else { // Other browsers.
-        var a = document.createElement("a"),
+        let a = document.createElement("a"),
         url = URL.createObjectURL(file);
         a.href = url;
         a.download = filename;
@@ -237,11 +238,11 @@ function formValidation() {
 }
 
 function ShowTooltip(id) {
-    var tooltip = document.getElementById(id);
+    let tooltip = document.getElementById(id);
     tooltip.style.visibility = "visible";
 
     window.onmousemove = function (e) {
-        var x = e.clientX,
+        let x = e.clientX,
             y = e.clientY;
         tooltip.style.left = (x + 20) + 'px';
         tooltip.style.top = (y - 40) + 'px';
@@ -253,8 +254,8 @@ function HideTooltip(id) {
 }
 
 function ToggleDarkMode() {
-    const dmIcon = document.getElementById("darkmodeIcon");
-    var theme = document.getElementsByTagName('link')[0];
+    let dmIcon = document.getElementById("darkmodeIcon");
+    let theme = document.getElementsByTagName('link')[0];
 
     if (theme.getAttribute('href') == 'stylesMF.css') {
         theme.setAttribute('href', 'darkmode.css');

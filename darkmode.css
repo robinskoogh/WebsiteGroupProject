@@ -1,6 +1,8 @@
 /* body {
     --text-color: #222;
-    --bkg-color: #fff; 
+    --bkg-color: #fff;
+    background: #222;
+    background-color: #fff;
 }
 
 body.dark-theme {
@@ -54,8 +56,8 @@ span.dark-theme {
 }
 
 .container .navbar .menuItem a:hover {
-    --bkg-color: rgb(228, 228, 228);
-    --text-color: #222;
+    --bkg-color: #303030;
+    --text-color: #eee;
 }
 .container .navbar .menuItem a.dark-theme:hover {
     --bkg-color: rgb(70, 70, 70);
@@ -99,7 +101,6 @@ body, span, .diagram, .percentage, .diagramText, #mainHeader, #mainFooter, input
 h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .container .navbar .menuItem a, .modal, .modal-content {
     color: var(--text-color);
 } */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 * {
@@ -109,7 +110,6 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
 	vertical-align: baseline;
-    background-color: #333;
 }
 
 .mainBody {
@@ -122,7 +122,9 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     justify-content: center;
     text-align: center;
     margin-bottom: 100px;
-    gap: 20px;
+    gap: 20px;   
+    background-color: #303030;
+    color: #eee;
 }
 
 .mainBody .contentContainer {
@@ -131,7 +133,6 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
 }
 
 .contentContainer {
-    background-color: #333;
     border-radius: 10px;
     max-width: 75%;
 }
@@ -141,7 +142,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
 }
 
 #mainHeader {
-    background-color: #333;
+    background-color: #303030;
     height: 80px;
     box-shadow: 0 -35px 50px black;
 }
@@ -151,7 +152,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     justify-content: center;
     position: fixed;
     bottom: 0;
-    background-color: #333;
+    background-color: #303030;
     color: #eee;
     text-align: center;
     padding: 20px;
@@ -196,21 +197,24 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
 .workWithUs {
     margin: 30px 0;
     line-height: 100%;
+    background-color: #303030;
 }
 
 .workWithUs a {
     text-decoration: none;
-    color: #eee;
+    color: black;
     font-size: 20px;
     padding: 10px 25px;
     border-radius: 4px;
-    background-color: #333;
+    background-color: #404040;
+    color: #eee;
     transition: 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .workWithUs a:hover {
-    background-color: #7070702c;
+    background-color: #303030;
+    color: #eee;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
@@ -316,8 +320,8 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
 }
 
 .menuItem:hover {
-    color: #707070;
-    background-color: #333;
+    color: #eee;
+    background-color: #404040;
 }
 
 .container .navbar ul {
@@ -344,12 +348,12 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     cursor: pointer;
     padding: 10px 40px;
     line-height: normal;
-    color: #555555;
+    color: #eee;
 }
 
 .menuItem {
     transition: 300ms;
-    color: #333;
+    color: #fff;
 }
 
 .container .navbar ul .close {
@@ -361,7 +365,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
 .container .navbar ul .close span {
     font-size: 40px;
     display: inline-block;
-    border: 1px solid #333;
+    border: 1px solid #cccccc;
     padding: 0 10px;
     cursor: pointer;
 }
@@ -463,6 +467,8 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     .mainBody {
         gap: 30px;
         column-gap: 100px;
+        background-color: #303030;
+        color: #eee;
     }
 
     .container .logo {
@@ -497,11 +503,12 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     .contentContainer {
         display: flex;
         min-height: 200px;
+        color: black;
     }
 
     .contentItem {
         align-self: flex-end;
-        background-color: #eee;
+        background-color: rgba(228, 228, 228, 0.815);
         border-radius: 10px;
     }
 
@@ -514,11 +521,13 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
         display: block;
         text-align: left;
         transition: 300ms;
-        background-color: #333;
+        background-color: #303030;
+        color: #eee;
     }
 
     .container .navbar ul li div a:hover {
-        background-color: #333;
+        background-color: #101010;
+        color: #eee;
     }
 
     .container .navbar ul .close {
@@ -558,7 +567,8 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
         font-size: 24px;
         padding: 10px 25px;
         border-radius: 4px;
-        background-color: #333;
+        background-color: #404040;
+        color: #eee;
         transition: 0.3s;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     }
@@ -576,22 +586,23 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     
     .dropdownContent a {
         float: none;
-        color: #eee;
+        color: black;
         padding: 12px;
         text-decoration: none;
         display: block;
         text-align: left;
         transition: 300ms;
-        background-color: #333;
+        background-color: #303030;
     }
     
     .dropdownContent a:hover {
-        background-color: #333;
+        background-color: rgb(228, 228, 228);
     }
 
     .menuItem:hover .dropdownContent {
         visibility: visible;
         opacity: 1;
+        background-color: #404040;
     }
 
     .container .navbar .icon {
@@ -599,7 +610,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     }
 
     .container .navbar ul {
-        background-color: #333;
+        background-color: #303030;
         display: flex;
         flex-wrap: wrap;
         list-style: none;
@@ -645,7 +656,7 @@ h1, h2, h3, h4, h5, h6, p, span, input, .pie, .workWithUs a, #contactForm, .cont
     display: block;
     position: fixed;
     visibility: hidden;
-    background: #333;
+    background: #ddd;
     z-index: 1;
     padding: 10px;
     border-radius: 10px 10px;
