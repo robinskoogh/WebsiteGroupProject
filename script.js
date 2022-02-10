@@ -3,7 +3,7 @@
 
 let navMenuList = document.getElementById("navBarList");
 
-function Show() {
+function MobileMenu() {
     if (navMenuList.classList.contains("showMenu") ?? false){
         navMenuList.classList.remove("showMenu");
     }
@@ -12,18 +12,6 @@ function Show() {
     }
 }
 
-function Hide(){
-    navMenuList.classList.remove("showMenu");
-}
-
-function MenuPress() {
-    if (navMenuList.classList.contains("showMenu") ?? false){
-        navMenuList.classList.remove("showMenu");
-    }
-    else {
-        navMenuList.classList.add("showMenu");
-    }
-}
 
 function Send() {
     let tel = document.getElementById("phoneNumber").value;
