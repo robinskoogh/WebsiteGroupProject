@@ -28,8 +28,6 @@
 }
 
 .contentContainer {
-    background-color: #f5f5f5;
-    border-radius: 10px;
     max-width: 75%;
 }
 
@@ -278,7 +276,7 @@
 }
 
 #navBarList {
-    top: 80px;
+    top: 0;
 }
 
 .aContainer {
@@ -399,6 +397,8 @@
     .contentContainer {
         display: flex;
         min-height: 200px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
     }
 
     .contentItem {
