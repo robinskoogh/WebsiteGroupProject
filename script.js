@@ -260,17 +260,4 @@ function ToggleDarkMode() {
         theme.setAttribute('href', 'stylesMF.css');
         dmIcon.src = "/images/dark.png";
     }
-
-    // if (document.body.className == "") {
-    //     document.body.classList.toggle("dark-theme");
-    //     document.getElementById("mainHeader").classList.toggle("dark-theme");
-    //     document.getElementById("mainFooter").classList.toggle("dark-theme");
-    //     dmIcon.src = "/images/light.png";
-    // }
-    // else {
-    //     document.body.classList.toggle("dark-theme");
-    //     document.getElementById("mainHeader").classList.toggle("dark-theme");
-    //     document.getElementById("mainFooter").classList.toggle("dark-theme");
-    //     dmIcon.src = "/images/dark.png";
-    // }
 }

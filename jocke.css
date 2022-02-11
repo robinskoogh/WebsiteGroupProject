@@ -67,7 +67,7 @@
     animation-timing-function: ease-in-out;
     animation-delay: 3s;
     animation-fill-mode: both;
-    padding: 3%;
+    margin: 30px;
 }
 
 #h1 {
