@@ -363,6 +363,14 @@ body {
     z-index: 1;
 }
 
+input[type=text], input[type=email], input[type=tel] {
+    background-color: #292929;
+}
+
+textarea {
+    background-color: #292929;
+}
+
 @media (min-width: 768px) {
     .mainBody .contentContainer, .aContainer {
         flex: 1;
