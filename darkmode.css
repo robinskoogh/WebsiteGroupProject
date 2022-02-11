@@ -558,8 +558,17 @@ body {
     position: fixed;
     visibility: hidden;
     background: #ddd;
+    color: black;
     z-index: 1;
     padding: 10px;
     border-radius: 10px 10px;
     text-align: center;
+}
+
+.diagramText {
+    color: black;
+}
+
+.bar {
+    color: black;
 }
