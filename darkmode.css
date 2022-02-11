@@ -33,8 +33,6 @@ body {
 }
 
 .contentContainer {
-    background-color: #f5f5f5;
-    border-radius: 10px;
     max-width: 75%;
 }
 
@@ -113,6 +111,7 @@ body {
 
 .linkBtn a:hover {
     background-color: #7070702c;
+    color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
@@ -283,7 +282,7 @@ body {
 }
 
 #navBarList {
-    top: 80px;
+    top: 0;
 }
 
 .aContainer {
@@ -356,9 +355,13 @@ body {
 
 #tJocke:hover,
 #tRobin:hover {
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 40px lightslategrey;
 }
 
+.skillsBar #barChart tbody th {
+    background-color: #353535;
+    z-index: 1;
+}
 
 @media (min-width: 768px) {
     .mainBody .contentContainer, .aContainer {
@@ -410,6 +413,7 @@ body {
         align-self: flex-end;
         background-color: rgba(228, 228, 228, 0.815);
         border-radius: 10px;
+        color: black;
     }
 
     .container .navbar ul li div a {
